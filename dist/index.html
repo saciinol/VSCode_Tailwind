@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="h-full scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	</head>
+	<body class="font-body">
+		<header class="header bg-bg-1 text-bg-2 z-9999 fixed w-full">
+			<div class="container">
+				<div class="header__wrapper py-3">
+					<div class="flex justify-between items-center">
+						<div class="header__logo flex gap-3 items-center">
+							<img class="h-6 w-6" src="./images/header-logo.png" alt="" />
+							<h1 class="text-xl">Visual Studio Code</h1>
+						</div>
+
+						<button
+							class="toggle-menu flex flex-col gap-1 p-2 rounded-md active:bg-[#0066b8] focus:bg-[#0066b8] focus:"
+						>
+							<span class="w-5 h-0.5 bg-bg-2 block"></span>
+							<span class="w-5 h-0.5 bg-bg-2 block"></span>
+							<span class="w-5 h-0.5 bg-bg-2 block"></span>
+						</button>
+					</div>
+
+					<nav class="header__nav">
+						<ul class="flex flex-col gap-4 pt-4 pl-[15px]">
+							<li><a href="#">Docs</a></li>
+							<li><a href="#">Updates</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">API</a></li>
+							<li><a href="#">Extensions</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Learn</a></li>
+							<li><a href="#">Search</a></li>
+						</ul>
+
+						<div class="bg-[#0066b8] p-4 mt-4">
+							<button class="flex items-center gap-2 ml-3"><i class="fa fa-download"></i>Download</button>
+						</div>
+					</nav>
+
+					<div class="header__search-download hidden">
+						<i class="fa fa-search"></i>
+						<input type="text" placeholder="Search Docs" />
+						<div class="bg-[#0066b8] p-4 mt-4">
+							<button class=""><i class="fa fa-download"></i>Download</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="cta pt-[52px] bg-[#25252b] text-[#ccc]">
+			<div class="container">
+				<p class="py-3 px-8 text-[16px] text-center">
+					<a href="#" class="text-[#0098FF] underline">Version 1.80</a> is now available! Read about the new features
+					and fixes from June.
+				</p>
+			</div>
+		</section>
+
+		<section class="banner bg-bg-1">
+			<div class="container">
+				<div class="banner__wrapper pt-7">
+					<div class="banner__intro text-bg-2 text-center">
+						<h1 class="text-[42px] leading-[50px]">Code editing.<br />Redefined.</h1>
+						<p class="text-[#ffffff99] my-2 text-[14px]">Free. Built on open source. Runs everywhere.</p>
+
+						<div class="flex gap-0.5 items-center justify-center py-2">
+							<button class="bg-[#0066b8] px-12 py-2">
+								<h1>Download for Windows</h1>
+								<p class="text-[12px]">Stable Build</p>
+							</button>
+
+							<div class="bg-[#0066b8] py-[17px] px-3"><i class="fa-solid fa-chevron-down"></i></div>
+						</div>
+
+						<div class="flex justify-center my-1">
+							<p class="bg-[#25252B] px-11 py-2 text-[12px] text-center rounded-md">
+								<a href="#" class="text-[#0098ff]">Web</a>, <a href="#" class="text-[#0098ff]">Insiders edition</a>, or
+								<a href="#" class="text-[#0098ff]">other platforms</a>
+							</p>
+						</div>
+
+						<p class="text-[#ffffff99] text-[12px] my-4">
+							By using VS Code, you agree to its<br /><a href="#" class="text-[#0098FF]"
+								>license and privacy statement</a
+							>.
+						</p>
+					</div>
+
+					<div class="banner__image">
+						<img src="./images/banner-image.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="value-props">
+			<div class="container">
+				<div class="value-props__content py-4">
+					<ul class="grid grid-cols-2 gap-6">
+						<li class="flex flex-col items-center justify-center gap-2 text-[17px]">
+							<i class="fa-regular fa-lightbulb text-[42px]"></i>IntelliSense
+						</li>
+						<li class="flex flex-col items-center justify-center gap-2 text-[17px]">
+							<i class="fa fa-play text-[42px]"></i><i class="fa fa-bug absolute left-[285px] z-50"></i>Run and Debug
+						</li>
+						<li class="flex flex-col items-center justify-center gap-2 text-[17px]">
+							<i class="fa-solid fa-code-branch text-[42px]"></i>Built-in Git
+						</li>
+						<li class="flex flex-col items-center justify-center gap-2 text-[17px]">
+							<i class="fa fa-table-cells-large text-[42px]"></i>Extensions
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="reviews bg-bg-3 py-10">
+			<div class="container">
+				<i class="fa fa-arrow-left"></i>
+				<div class="reviews__slider">
+					<div class="reviews__item">
+						<div class="reviews__content">
+							<img src="https://via.placeholder.com/100x100" alt="" />
+
+							<div class="reviews__text">
+								<span>
+									<h6>Una Kravets</h6>
+									<small>@Una</small>
+								</span>
+
+								<p>
+									VS <a href="#">@code</a> does so many things right. I'm constantly impressed by the UX, and
+									customizing workspace / user preferences is no exception. 🙌🏼💯 It just keeps getting better ❤️
+								</p>
+							</div>
+						</div>
+
+						<div class="reviews__content">
+							<img src="https://via.placeholder.com/100x100" alt="" />
+
+							<div class="reviews__text">
+								<span>
+									<h6>Jonathan Dunlap</h6>
+									<small>@jadbox</small>
+								</span>
+
+								<p>
+									VS Code will have deep remote development. You can connect to a container running a different OS and
+									use any VS Code plugins, linting, debugging for that environment. 🔥🔥🔥
+								</p>
+							</div>
+						</div>
+
+						<div class="reviews__content">
+							<img src="https://via.placeholder.com/100x100" alt="" />
+
+							<div class="reviews__text">
+								<span>
+									<h6>Pavithra Kodmad</h6>
+									<small>@PKodmad</small>
+								</span>
+
+								<p>
+									VS Code is my most used and favorite editor. I love being able to customize the editor - changing the
+									layout, the icons, fonts and color scheme is so easy!
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="reviews__item">
+						<div class="reviews__content">
+							<img src="https://via.placeholder.com/100x100" alt="" />
+
+							<div class="reviews__text">
+								<span>
+									<h6>Darren</h6>
+									<small>@MrDarrenV</small>
+								</span>
+
+								<p>
+									Just as I thought <a href="#">@code</a> couldn't get better, out comes its Remote Development plugins
+									that let you remote into containers as a dev environment! 😍
+								</p>
+							</div>
+						</div>
+
+						<div class="reviews__content">
+							<img src="https://via.placeholder.com/100x100" alt="" />
+
+							<div class="reviews__text">
+								<span>
+									<h6>Cassidy Williams</h6>
+									<small>@cassidoo</small>
+								</span>
+
+								<p>
+									I was a vim fan, but then discovered VS Code's Vim plugin, which lets me add in my vim keybindings. I
+									can maintain my coding style without having to compromise on speed.
+								</p>
+							</div>
+						</div>
+
+						<div class="reviews__content">
+							<img src="https://via.placeholder.com/100x100" alt="" />
+
+							<div class="reviews__text">
+								<span>
+									<h6>Gift Egwuenu</h6>
+									<small>@lauragift21</small>
+								</span>
+
+								<p>
+									I love <a href="#">@code</a> The built-in markdown previewer is awesome and the plugin system allows
+									me to use GitLens, which makes my workflow so much easier.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<i class="fa fa-arrow-right"></i>
+			</div>
+		</section>
+
+		<section class="use">
+			<div class="use__item">
+				<div class="use__content">
+					<img src="./images/home-intellisense.svg" alt="" />
+
+					<div class="use__text">
+						<h2>Meet Intellisense.</h2>
+						<p>
+							Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based
+							on variable types, function definitions, and imported modules.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="use__item">
+				<div class="use__content">
+					<img src="./images/home-debug.svg" alt="" />
+
+					<div class="use__text">
+						<h2>Print statement debugging is a thing of the past.</h2>
+						<p>
+							Debug code right from the editor. Launch or attach to your running apps and debug with break points, call
+							stacks, and an interactive console.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="use__item">
+				<div class="use__content">
+					<img src="./images/home-git.svg" alt="" />
+
+					<div class="use__text">
+						<h2>Git commands built-in.</h2>
+						<p>
+							Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make
+							commits right from the editor. Push and pull from any hosted SCM service.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="use__item">
+				<div class="use__content">
+					<img src="./images/extensions.png" alt="" />
+
+					<div class="use__text">
+						<h2>GExtensible and customizable.</h2>
+						<p>
+							Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to
+							additional services. Extensions run in separate processes, ensuring they won't slow down your editor.
+							<a href="#">Learn more about extensions.</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="use__item">
+				<div class="use__content">
+					<img src="./images/home-azure.svg" alt="" />
+
+					<div class="use__text">
+						<h2>Deploy with confidence and ease</h2>
+						<p>
+							With <a href="#">Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python (and
+							more!) sites, store and query relational and document based data, and scale with serverless computing, all
+							with ease,
+							<a href="#">all from within VS Code.</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="getting-started bg-bg-3">
+			<div class="container">
+				<div class="getting-started__content">
+					<h1>VS Code for</h1>
+
+					<div class="getting-started__languages">
+						<ul>
+							<li><i class="fas fa-times"></i>Javascript</li>
+							<li><i class="fas fa-times"></i>Python</li>
+							<li><i class="fas fa-times"></i>Java</li>
+							<li><i class="fas fa-times"></i>Markdown</li>
+							<li><i class="fas fa-times"></i>Typescript</li>
+							<li><i class="fas fa-times"></i>C/C++</li>
+							<li><i class="fas fa-times"></i>Json</li>
+							<li><i class="fas fa-times"></i>Powershell</li>
+							<li><i class="fas fa-times"></i>HTML/CSS</li>
+							<li><i class="fas fa-times"></i>C#</li>
+							<li><i class="fas fa-times"></i>PHP</li>
+							<li><i class="fas fa-times"></i>YAML</li>
+						</ul>
+
+						<p><a href="#">and many more languages on the Marketplace...</a></p>
+					</div>
+
+					<button>Get Started Now</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="alt-downloads bg-bg-2">
+			<div class="container">
+				<div class="alt-downloads__wrapper py-10">
+					<div class="alt-downloads__item">
+						<img src="https://via.placeholder.com/200x200" alt="" />
+
+						<button>
+							<i class="fas fa-times"></i>
+							<h1>Windows</h1>
+							<br />
+							<p>Windows 8, 10, 11</p>
+						</button>
+
+						<ul>
+							<li>
+								User Installer
+								<p>x64</p>
+								<p>x86</p>
+								<p>Arm64</p>
+							</li>
+							<li>
+								System Installer
+								<p>x64</p>
+								<p>x86</p>
+								<p>Arm64</p>
+							</li>
+							<li>
+								.zip
+								<p>x64</p>
+								<p>x86</p>
+								<p>Arm64</p>
+							</li>
+							<li>
+								CLI
+								<p>x64</p>
+								<p>x86</p>
+								<p>Arm64</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="alt-downloads__item">
+						<img src="https://via.placeholder.com/200x200" alt="" />
+
+						<div class="alt-downloads__button">
+							<button>
+								<i class="fas fa-times"></i>
+								<h1>.deb</h1>
+								<br />
+								<p>Debian, Ubuntu</p>
+							</button>
+							<button>
+								<i class="fas fa-times"></i>
+								<h1>.rpm</h1>
+								<br />
+								<p>Red Hat, Fedora, SUSE</p>
+							</button>
+						</div>
+
+						<ul>
+							<li>
+								.deb
+								<p>x64</p>
+								<p>Arm32</p>
+								<p>Arm64</p>
+							</li>
+							<li>
+								.rpm
+								<p>x64</p>
+								<p>Arm32</p>
+								<p>Arm64</p>
+							</li>
+							<li>
+								.tar.gz
+								<p>x64</p>
+								<p>Arm32</p>
+								<p>Arm64</p>
+							</li>
+							<li>
+								Snap
+								<p>Snap Store</p>
+							</li>
+							<li>
+								CLI
+								<p>x64</p>
+								<p>Arm32</p>
+								<p>Arm64</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="alt-downloads__item">
+						<img src="https://via.placeholder.com/200x200" alt="" />
+
+						<button>
+							<i class="fas fa-times"></i>
+							<h1>Mac</h1>
+							<br />
+							<p>macOS 10.11+</p>
+						</button>
+
+						<ul>
+							<li>
+								.zip
+								<p>Intel chip</p>
+								<p>Apple silicon</p>
+								<p>Universal</p>
+							</li>
+							<li>
+								CLI
+								<p>Intel chip</p>
+								<p>Apple silicon</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="license-privacy bg-bg-3">
+			<div class="container">
+				<div class="license-privacy__wrapper py-10">
+					<div class="license-privacy__intro">
+						<div>
+							<h1>Want new features sooner?</h1>
+							<h3>Get the <a href="#">Insiders build</a> instead.</h3>
+						</div>
+
+						<div>
+							<h1>Use <a href="#">vscode.dev</a> for quick edits online!</h1>
+							<h3>GitHub, Azure Repos, and local files.</h3>
+						</div>
+					</div>
+
+					<div>
+						<h4>License and Privacy Terms</h4>
+						<p>
+							By downloading and using Visual Studio Code, you agree to the <a href="#">license terms</a> and
+							<a href="#">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us
+							improve the product. If you would prefer not to have this data sent please go see
+							<a href="#">How to Disable Crash Reporting</a> to learn how to disable it.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer bg-bg-1">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="left">
+						<ul class="footer__links">
+							<li>Hello from Seattle.</li>
+							<li><a href="#">Follow @code</a></li>
+							<li>
+								<a href="#"><i class="fas fa-times"></i>Star</a>
+							</li>
+							<li><a href="#">148,221</a></li>
+						</ul>
+					</div>
+
+					<div class="right">
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">License</a></li>
+						</ul>
+
+						<div class="copyright">
+							<a href="#"><img src="" alt="" />Microsoft</a>
+							<span>© 2023 Microsoft</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
