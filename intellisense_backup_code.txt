@@ -1,0 +1,92 @@
+<section class="intellisense bg-bg-2">
+			<div class="container">
+				<div class="intellisense__wrapper py-10">
+					<div class="intellisense__image w-[60%] m-auto block">
+						<img src="./images/home-intellisense.svg" alt="" />
+					</div>
+
+					<div class="intellisense__text flex flex-col gap-8">
+						<h2 class="text-[19px]" class="text-[19px]">Meet Intellisense.</h2>
+						<p class="text-[15px] leading-8">
+							Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based
+							on variable types, function definitions, and imported modules.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="debugging bg-bg-3">
+			<div class="container">
+				<div class="debugging__wrapper py-10">
+					<div class="debugging__image w-[60%] m-auto block">
+						<img src="./images/home-debug.svg" alt="" />
+					</div>
+
+					<div class="debugging__text">
+						<h2 class="text-[19px]">Print statement debugging is a thing of the past.</h2>
+						<p class="text-[15px] leading-8">
+							Debug code right from the editor. Launch or attach to your running apps and debug with break points, call
+							stacks, and an interactive console.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="git bg-bg-2">
+			<div class="container">
+				<div class="git__wrapper py-10">
+					<div class="git__image w-[60%] m-auto block">
+						<img src="./images/home-git.svg" alt="" />
+					</div>
+
+					<div class="git__text">
+						<h2 class="text-[19px]">Git commands built-in.</h2>
+						<p class="text-[15px] leading-8">
+							Working with Git and other SCM providers has never been easier. Review diffs, stage files, and make
+							commits right from the editor. Push and pull from any hosted SCM service.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="extensions bg-bg-3">
+			<div class="container">
+				<div class="extensions__wrapper py-10">
+					<div class="extensions__image w-[60%] m-auto block">
+						<img src="./images/extensions.png" alt="" />
+					</div>
+
+					<div class="extensions__text">
+						<h2 class="text-[19px]">GExtensible and customizable.</h2>
+						<p class="text-[15px] leading-8">
+							Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to
+							additional services. Extensions run in separate processes, ensuring they won't slow down your editor.
+							<a href="#">Learn more about extensions.</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="deploy bg-bg-2">
+			<div class="container">
+				<div class="deploy__wrapper py-10">
+					<div class="deploy__image w-[60%] m-auto block">
+						<img src="https://via.placeholder.com/400x300" alt="" />
+					</div>
+
+					<div class="deploy__text">
+						<h2 class="text-[19px]">Deploy with confidence and ease</h2>
+						<p class="text-[15px] leading-8">
+							With <a href="#">Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python (and
+							more!) sites, store and query relational and document based data, and scale with serverless computing, all
+							with ease,
+							<a href="#">all from within VS Code.</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>

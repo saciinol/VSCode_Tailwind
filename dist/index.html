@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full scroll-smooth">
+<html class="h-full">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
 						</div>
 
 						<button
-							class="toggle-menu flex flex-col gap-1 p-2 rounded-md active:bg-[#0066b8] focus:bg-[#0066b8] focus:"
+							class="toggle-menu flex flex-col gap-1 p-2 rounded-md hover:bg-[#0066b8] active:bg-[#0066b8] focus:bg-[#0066b8] focus:"
 						>
 							<span class="w-5 h-0.5 bg-bg-2 block"></span>
 							<span class="w-5 h-0.5 bg-bg-2 block"></span>
@@ -305,145 +305,179 @@
 
 		<section class="getting-started bg-bg-3">
 			<div class="container">
-				<div class="getting-started__content">
-					<h1>VS Code for</h1>
+				<div class="getting-started__content py-10">
+					<h1 class="text-center text-[20px]">VS Code for</h1>
 
-					<div class="getting-started__languages">
-						<ul>
-							<li><i class="fas fa-times"></i>Javascript</li>
-							<li><i class="fas fa-times"></i>Python</li>
-							<li><i class="fas fa-times"></i>Java</li>
-							<li><i class="fas fa-times"></i>Markdown</li>
-							<li><i class="fas fa-times"></i>Typescript</li>
-							<li><i class="fas fa-times"></i>C/C++</li>
-							<li><i class="fas fa-times"></i>Json</li>
-							<li><i class="fas fa-times"></i>Powershell</li>
-							<li><i class="fas fa-times"></i>HTML/CSS</li>
-							<li><i class="fas fa-times"></i>C#</li>
-							<li><i class="fas fa-times"></i>PHP</li>
-							<li><i class="fas fa-times"></i>YAML</li>
+					<div class="my-10">
+						<ul class="grid grid-cols-2 gap-5">
+							<li class="flex gap-[5px] items-center"><img src="./images/javascript.svg" alt="">Javascript</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/python.svg" alt=""></i>Python</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/java.svg" alt=""></i>Java</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/markdown.svg" alt=""></i>Markdown</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/typescript.svg" alt=""></i>Typescript</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/cpp.svg" alt=""></i>C/C++</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/json.svg" alt=""></i>Json</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/powershell.svg" alt=""></i>Powershell</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/html.svg" alt=""></i>HTML/CSS</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/csharp.svg" alt=""></i>C#</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/php.svg" alt=""></i>PHP</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/yaml.svg" alt=""></i>YAML</li>
 						</ul>
 
-						<p><a href="#">and many more languages on the Marketplace...</a></p>
+						<p class="text-[#0098FF] mt-5 text-center"><a href="#">and many more languages on the Marketplace...</a></p>
 					</div>
 
-					<button>Get Started Now</button>
+					<div class="text-center my-5">
+						<button class="bg-[#0066b8] px-10 py-5 text-bg-2 font-bold rounded-sm">Get Started Now</button>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="alt-downloads bg-bg-2">
 			<div class="container">
-				<div class="alt-downloads__wrapper py-10">
+				<div class="py-12 text-center">
 					<div class="alt-downloads__item">
-						<img src="https://via.placeholder.com/200x200" alt="" />
+						
+						<img src="./images/windows-logo.png" class="m-auto block w-[20%] mb-5" alt="" />
+						
 
-						<button>
-							<i class="fas fa-times"></i>
-							<h1>Windows</h1>
-							<br />
-							<p>Windows 8, 10, 11</p>
+						<button class="bg-[#0066b8] px-16 py-3 text-center text-bg-2">
+							<div class="flex gap-4">
+								<i class="fa fa-download"></i>
+								<h1>Windows</h1>
+							</div>
+
+							<p class="text-[10px]">Windows 8, 10, 11</p>
 						</button>
 
-						<ul>
-							<li>
+						<ul class="my-5">
+							<li class="flex justify-center items-center gap-4 pl-2 text-[14px] font-bold">
 								User Installer
-								<p>x64</p>
-								<p>x86</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x86</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-2 text-[14px] font-bold">
 								System Installer
-								<p>x64</p>
-								<p>x86</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x86</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-14 pl-10 text-[14px] font-bold">
 								.zip
-								<p>x64</p>
-								<p>x86</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x86</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-14 pl-10 text-[14px] font-bold">
 								CLI
-								<p>x64</p>
-								<p>x86</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x86</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
 						</ul>
 					</div>
 
 					<div class="alt-downloads__item">
-						<img src="https://via.placeholder.com/200x200" alt="" />
+						<img src="./images/linux-logo.png" class="m-auto block w-[20%] mb-5" alt="" />
 
-						<div class="alt-downloads__button">
-							<button>
-								<i class="fas fa-times"></i>
-								<h1>.deb</h1>
-								<br />
-								<p>Debian, Ubuntu</p>
+						<div class="flex gap-2 justify-center">
+							<button class="bg-[#0066b8] px-10 py-3 text-center text-bg-2">
+								<div class="flex gap-4 justify-center">
+									<i class="fa fa-download"></i>
+									<h1>.deb</h1>
+								</div>
+								
+								<p class="text-[10px]">Debian, Ubuntu</p>
 							</button>
-							<button>
-								<i class="fas fa-times"></i>
-								<h1>.rpm</h1>
-								<br />
-								<p>Red Hat, Fedora, SUSE</p>
+							<button class="bg-[#0066b8] px-6 py-3 text-bg-2">
+								<div class="flex gap-4  justify-center">
+									<i class="fa fa-download"></i>
+									<h1>.rpm</h1>
+								</div>
+								
+								<p class="text-[10px]">Red Hat, Fedora, SUSE</p>
 							</button>
 						</div>
 
-						<ul>
-							<li>
+						<ul class="my-5">
+							<li class="flex justify-center items-center gap-4 pl-2 text-[14px] font-bold">
 								.deb
-								<p>x64</p>
-								<p>Arm32</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm32</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-3 pl-2 text-[14px] font-bold">
 								.rpm
-								<p>x64</p>
-								<p>Arm32</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm32</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-2 text-[14px] font-bold">
 								.tar.gz
-								<p>x64</p>
-								<p>Arm32</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm32</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-2 mr-10 text-[14px] font-bold">
 								Snap
-								<p>Snap Store</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Snap Store</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-4 pl-4 text-[14px] font-bold">
 								CLI
-								<p>x64</p>
-								<p>Arm32</p>
-								<p>Arm64</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm32</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Arm64</p>
+								</div>
 							</li>
 						</ul>
 					</div>
 
 					<div class="alt-downloads__item">
-						<img src="https://via.placeholder.com/200x200" alt="" />
+						<img src="./images/apple-logo.svg" class="m-auto block w-[20%] mb-5" alt="" />
 
-						<button>
-							<i class="fas fa-times"></i>
-							<h1>Mac</h1>
-							<br />
-							<p>macOS 10.11+</p>
+						<button class="bg-[#0066b8] px-24 py-3 text-center text-bg-2">
+							<div class="flex gap-4 justify-center">
+								<i class="fa fa-download"></i>
+								<h1>Mac</h1>
+							</div>
+						
+							<p class="text-[10px]">macOS 10.11+</p>
 						</button>
 
-						<ul>
-							<li>
+						<ul class="my-5">
+							<li class="flex justify-center items-center gap-2 text-[14px] font-bold">
 								.zip
-								<p>Intel chip</p>
-								<p>Apple silicon</p>
-								<p>Universal</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Intel chip</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Apple silicon</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Universal</p>
+								</div>
 							</li>
-							<li>
+							<li class="flex justify-center items-center gap-2 mr-14 text-[14px] font-bold">
 								CLI
-								<p>Intel chip</p>
-								<p>Apple silicon</p>
+								<div class="flex gap-1 text-white text-[12px] font-normal">
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Intel chip</p>
+									<p class="bg-[#0066b8] rounded-sm px-0.5">Apple silicon</p>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -453,26 +487,26 @@
 
 		<section class="license-privacy bg-bg-3">
 			<div class="container">
-				<div class="license-privacy__wrapper py-10">
-					<div class="license-privacy__intro">
+				<div class="license-privacy__wrapper py-[50px] px-[19%] text-center">
+					<div class="flex flex-col">
 						<div>
-							<h1>Want new features sooner?</h1>
+							<h1 class="font-bold text-[18px]">Want new features sooner?</h1>
 							<h3>Get the <a href="#">Insiders build</a> instead.</h3>
 						</div>
 
-						<div>
-							<h1>Use <a href="#">vscode.dev</a> for quick edits online!</h1>
+						<div class="my-32">
+							<h1 class="font-bold text-[18px]">Use <a href="#" class="text-[#0066b8]">vscode.dev</a> for quick edits online!</h1>
 							<h3>GitHub, Azure Repos, and local files.</h3>
 						</div>
 					</div>
 
 					<div>
-						<h4>License and Privacy Terms</h4>
-						<p>
-							By downloading and using Visual Studio Code, you agree to the <a href="#">license terms</a> and
-							<a href="#">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us
+						<h4 class="text-[14px] font-bold">License and Privacy Terms</h4>
+						<p class="text-[12px] leading-8">
+							By downloading and using Visual Studio Code, you agree to the <a href="#" class="text-[#0066b8]">license terms</a> and
+							<a href="#" class="text-[#0066b8]">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us
 							improve the product. If you would prefer not to have this data sent please go see
-							<a href="#">How to Disable Crash Reporting</a> to learn how to disable it.
+							<a href="#" class="text-[#0066b8]">How to Disable Crash Reporting</a> to learn how to disable it.
 						</p>
 					</div>
 				</div>
@@ -481,11 +515,11 @@
 
 		<footer class="footer bg-bg-1">
 			<div class="container">
-				<div class="footer__wrapper">
+				<div class="footer__wrapper text-white">
 					<div class="left">
-						<ul class="footer__links">
-							<li>Hello from Seattle.</li>
-							<li><a href="#">Follow @code</a></li>
+						<ul class="flex gap-5">
+							<li class="hidden">Hello from Seattle.</li>
+							<li class="text-[14px]"><a href="#">Follow @code</a></li>
 							<li>
 								<a href="#"><i class="fas fa-times"></i>Star</a>
 							</li>
@@ -493,16 +527,16 @@
 						</ul>
 					</div>
 
-					<div class="right">
-						<ul>
+					<div class="right flex justify-between">
+						<ul class="text-[12px] flex gap-5 flex-wrap">
 							<li><a href="#">Support</a></li>
 							<li><a href="#">Privacy</a></li>
 							<li><a href="#">Terms of Use</a></li>
 							<li><a href="#">License</a></li>
 						</ul>
 
-						<div class="copyright">
-							<a href="#"><img src="" alt="" />Microsoft</a>
+						<div class="flex flex-col">
+							<a href="#"><img src="./images/microsoft-logo.png" class="block m-auto w-[15%]" alt="" /></a>
 							<span>© 2023 Microsoft</span>
 						</div>
 					</div>
