@@ -5,19 +5,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="/dist/output.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
 	</head>
-	<body class="font-body">
+	<body class="font-body overflow-x-hidden">
 		<header class="header bg-bg-1 text-bg-2 z-9999 fixed w-full">
 			<div class="container">
-				<div class="header__wrapper py-3">
-					<div class="flex justify-between items-center">
+				<div class="header__wrapper lg:flex lg:items-center">
+					<div class="flex justify-between items-center py-3">
 						<div class="header__logo flex gap-3 items-center">
 							<img class="h-6 w-6" src="./images/header-logo.png" alt="" />
 							<h1 class="text-xl">Visual Studio Code</h1>
 						</div>
 
 						<button
-							class="toggle-menu flex flex-col gap-1 p-2 rounded-md hover:bg-[#0066b8] active:bg-[#0066b8] focus:bg-[#0066b8] focus:"
+							class="toggle-menu flex flex-col gap-1 p-2 rounded-md hover:bg-[#0066b8] active:bg-[#0066b8] focus:bg-[#0066b8] lg:hidden"
 						>
 							<span class="w-5 h-0.5 bg-bg-2 block"></span>
 							<span class="w-5 h-0.5 bg-bg-2 block"></span>
@@ -26,7 +27,7 @@
 					</div>
 
 					<nav class="header__nav">
-						<ul class="flex flex-col gap-4 pt-4 pl-[15px]">
+						<ul class="flex flex-col gap-4 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#9d9d9d]">
 							<li><a href="#">Docs</a></li>
 							<li><a href="#">Updates</a></li>
 							<li><a href="#">Blog</a></li>
@@ -34,20 +35,27 @@
 							<li><a href="#">Extensions</a></li>
 							<li><a href="#">FAQ</a></li>
 							<li><a href="#">Learn</a></li>
-							<li><a href="#">Search</a></li>
+							<li class="lg:hidden"><a href="#">Search</a></li>
 						</ul>
 
-						<div class="bg-[#0066b8] p-4 mt-4">
+						<div class="bg-[#0066b8] p-4 mt-4 lg:hidden">
 							<button class="flex items-center gap-2 ml-3"><i class="fa fa-download"></i>Download</button>
 						</div>
 					</nav>
 
-					<div class="header__search-download hidden">
-						<i class="fa fa-search"></i>
-						<input type="text" placeholder="Search Docs" />
-						<div class="bg-[#0066b8] p-4 mt-4">
-							<button class=""><i class="fa fa-download"></i>Download</button>
+					<div class="header__search-download hidden lg:flex items-center ml-[183px] gap-4 xl:ml-[170px] xl:gap-0">
+						<div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white">
+							<i class="fa fa-search"></i>
 						</div>
+						<input
+							type="text"
+							placeholder="Search Docs"
+							class="w-[190px] py-[14px] px-10 lg:hidden xl:block bg-[#3d3d42]"
+						/>
+						<button class="bg-[#0066b8] py-[14px] px-5 flex items-center gap-3">
+							<i class="fa fa-download"></i>
+							<p>Download</p>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -64,14 +72,14 @@
 
 		<section class="banner bg-bg-1">
 			<div class="container">
-				<div class="banner__wrapper pt-7">
-					<div class="banner__intro text-bg-2 text-center">
+				<div class="banner__wrapper pt-7 lg:flex lg:items-center lg:justify-center lg:gap-6 lg:py-7">
+					<div class="banner__intro text-bg-2 text-center lg:w-[800px]">
 						<h1 class="text-[42px] leading-[50px]">Code editing.<br />Redefined.</h1>
 						<p class="text-[#ffffff99] my-2 text-[14px]">Free. Built on open source. Runs everywhere.</p>
 
 						<div class="flex gap-0.5 items-center justify-center py-2">
-							<button class="bg-[#0066b8] px-12 py-2">
-								<h1>Download for Windows</h1>
+							<button class="bg-[#0066b8] px-12 py-2 lg:px-5">
+								<h1 class="font-bold">Download for Windows</h1>
 								<p class="text-[12px]">Stable Build</p>
 							</button>
 
@@ -79,7 +87,7 @@
 						</div>
 
 						<div class="flex justify-center my-1">
-							<p class="bg-[#25252B] px-11 py-2 text-[12px] text-center rounded-md">
+							<p class="platform bg-[#25252B] px-8 py-2 text-[12px] text-center rounded-md lg:px-2">
 								<a href="#" class="text-[#0098ff]">Web</a>, <a href="#" class="text-[#0098ff]">Insiders edition</a>, or
 								<a href="#" class="text-[#0098ff]">other platforms</a>
 							</p>
@@ -92,8 +100,8 @@
 						</p>
 					</div>
 
-					<div class="banner__image">
-						<img src="./images/banner-image.png" alt="" />
+					<div class="banner__image mb-8">
+						<img src="./images/banner-image2.png" class="lg:block lg:m-auto lg:w-full" alt="" />
 					</div>
 				</div>
 			</div>
@@ -102,12 +110,12 @@
 		<section class="value-props">
 			<div class="container">
 				<div class="value-props__content py-4">
-					<ul class="grid grid-cols-2 gap-6">
+					<ul class="grid grid-cols-2 gap-6 md:grid-cols-4">
 						<li class="flex flex-col items-center justify-center gap-2 text-[17px]">
 							<i class="fa-regular fa-lightbulb text-[42px]"></i>IntelliSense
 						</li>
 						<li class="flex flex-col items-center justify-center gap-2 text-[17px]">
-							<i class="fa fa-play text-[42px]"></i><i class="fa fa-bug absolute left-[285px] z-50"></i>Run and Debug
+							<i class="fa fa-play text-[42px]"></i>Run and Debug
 						</li>
 						<li class="flex flex-col items-center justify-center gap-2 text-[17px]">
 							<i class="fa-solid fa-code-branch text-[42px]"></i>Built-in Git
@@ -120,13 +128,12 @@
 			</div>
 		</section>
 
-		<section class="reviews bg-bg-3 py-10">
+		<section class="reviews bg-bg-3 py-20">
 			<div class="container">
-				<i class="fa fa-arrow-left"></i>
 				<div class="reviews__slider">
-					<div class="reviews__item">
-						<div class="reviews__content">
-							<img src="https://via.placeholder.com/100x100" alt="" />
+					<div class="reviews__item px-[60px]">
+						<div class="reviews__content flex justify-start gap-2">
+							<img src="./images/Una.jpg" class="w-[72px] h-[72px] rounded-full" alt="" />
 
 							<div class="reviews__text">
 								<span>
@@ -135,14 +142,15 @@
 								</span>
 
 								<p>
-									VS <a href="#">@code</a> does so many things right. I'm constantly impressed by the UX, and
-									customizing workspace / user preferences is no exception. 🙌🏼💯 It just keeps getting better ❤️
+									VS <a href="#" class="text-[#0098FF]">@code</a> does so many things right. I'm constantly impressed by
+									the UX, and customizing workspace / user preferences is no exception. 🙌🏼💯 It just keeps getting
+									better ❤️
 								</p>
 							</div>
 						</div>
 
-						<div class="reviews__content">
-							<img src="https://via.placeholder.com/100x100" alt="" />
+						<div class="reviews__content flex justify-start gap-2">
+							<img src="./images/jadbox.jpg" class="w-[72px] h-[72px] rounded-full" alt="" />
 
 							<div class="reviews__text">
 								<span>
@@ -157,8 +165,8 @@
 							</div>
 						</div>
 
-						<div class="reviews__content">
-							<img src="https://via.placeholder.com/100x100" alt="" />
+						<div class="reviews__content flex justify-start gap-2">
+							<img src="./images/PKodmad.jpg" class="w-[72px] h-[72px] rounded-full" alt="" />
 
 							<div class="reviews__text">
 								<span>
@@ -174,9 +182,9 @@
 						</div>
 					</div>
 
-					<div class="reviews__item">
-						<div class="reviews__content">
-							<img src="https://via.placeholder.com/100x100" alt="" />
+					<div class="reviews__item px-[60px]">
+						<div class="reviews__content flex justify-start gap-2">
+							<img src="./images/MrDarrenV.jpg" class="w-[72px] h-[72px] rounded-full" alt="" />
 
 							<div class="reviews__text">
 								<span>
@@ -185,14 +193,14 @@
 								</span>
 
 								<p>
-									Just as I thought <a href="#">@code</a> couldn't get better, out comes its Remote Development plugins
-									that let you remote into containers as a dev environment! 😍
+									Just as I thought <a href="#" class="text-[#0098FF]">@code</a> couldn't get better, out comes its
+									Remote Development plugins that let you remote into containers as a dev environment! 😍
 								</p>
 							</div>
 						</div>
 
-						<div class="reviews__content">
-							<img src="https://via.placeholder.com/100x100" alt="" />
+						<div class="reviews__content flex justify-start gap-2">
+							<img src="./images/cassidoo.jpg" class="w-[72px] h-[72px] rounded-full" alt="" />
 
 							<div class="reviews__text">
 								<span>
@@ -207,8 +215,8 @@
 							</div>
 						</div>
 
-						<div class="reviews__content">
-							<img src="https://via.placeholder.com/100x100" alt="" />
+						<div class="reviews__content flex justify-start gap-2">
+							<img src="./images/lauragift21.jpg" class="w-[72px] h-[72px] rounded-full" alt="" />
 
 							<div class="reviews__text">
 								<span>
@@ -217,21 +225,22 @@
 								</span>
 
 								<p>
-									I love <a href="#">@code</a> The built-in markdown previewer is awesome and the plugin system allows
-									me to use GitLens, which makes my workflow so much easier.
+									I love <a href="#" class="text-[#0098FF]">@code</a> The built-in markdown previewer is awesome and the
+									plugin system allows me to use GitLens, which makes my workflow so much easier.
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<i class="fa fa-arrow-right"></i>
 			</div>
 		</section>
 
 		<section class="use">
 			<div class="use__item">
 				<div class="use__content">
-					<img src="./images/home-intellisense.svg" alt="" />
+					<div class="use__image">
+						<img src="./images/home-intellisense.svg" alt="" />
+					</div>
 
 					<div class="use__text">
 						<h2>Meet Intellisense.</h2>
@@ -245,7 +254,9 @@
 
 			<div class="use__item">
 				<div class="use__content">
-					<img src="./images/home-debug.svg" alt="" />
+					<div class="use__image">
+						<img src="./images/home-debug.svg" alt="" />
+					</div>
 
 					<div class="use__text">
 						<h2>Print statement debugging is a thing of the past.</h2>
@@ -259,7 +270,9 @@
 
 			<div class="use__item">
 				<div class="use__content">
-					<img src="./images/home-git.svg" alt="" />
+					<div class="use__image">
+						<img src="./images/home-git.svg" alt="" />
+					</div>
 
 					<div class="use__text">
 						<h2>Git commands built-in.</h2>
@@ -273,10 +286,12 @@
 
 			<div class="use__item">
 				<div class="use__content">
-					<img src="./images/extensions.png" alt="" />
+					<div class="use__image">
+						<img src="./images/extensions.png" alt="" />
+					</div>
 
 					<div class="use__text">
-						<h2>GExtensible and customizable.</h2>
+						<h2>Extensible and customizable.</h2>
 						<p>
 							Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to
 							additional services. Extensions run in separate processes, ensuring they won't slow down your editor.
@@ -288,7 +303,9 @@
 
 			<div class="use__item">
 				<div class="use__content">
-					<img src="./images/home-azure.svg" alt="" />
+					<div class="use__image">
+						<img src="./images/home-azure.svg" alt="" />
+					</div>
 
 					<div class="use__text">
 						<h2>Deploy with confidence and ease</h2>
@@ -306,22 +323,22 @@
 		<section class="getting-started bg-bg-3">
 			<div class="container">
 				<div class="getting-started__content py-10">
-					<h1 class="text-center text-[20px]">VS Code for</h1>
+					<h1 class="text-center text-[20px] md:text-[30px]">VS Code for</h1>
 
 					<div class="my-10">
-						<ul class="grid grid-cols-2 gap-5">
-							<li class="flex gap-[5px] items-center"><img src="./images/javascript.svg" alt="">Javascript</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/python.svg" alt=""></i>Python</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/java.svg" alt=""></i>Java</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/markdown.svg" alt=""></i>Markdown</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/typescript.svg" alt=""></i>Typescript</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/cpp.svg" alt=""></i>C/C++</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/json.svg" alt=""></i>Json</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/powershell.svg" alt=""></i>Powershell</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/html.svg" alt=""></i>HTML/CSS</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/csharp.svg" alt=""></i>C#</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/php.svg" alt=""></i>PHP</li>
-							<li class="flex gap-[5px] items-center"><img src="./images/yaml.svg" alt=""></i>YAML</li>
+						<ul class="grid grid-cols-2 gap-5 md:grid-cols-4 lg:grid-cols-6">
+							<li class="flex gap-[5px] items-center"><img src="./images/javascript.svg" alt="" />Javascript</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/python.svg" alt="" />Python</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/java.svg" alt="" />Java</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/markdown.svg" alt="" />Markdown</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/typescript.svg" alt="" />Typescript</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/cpp.svg" alt="" />C/C++</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/json.svg" alt="" />Json</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/powershell.svg" alt="" />Powershell</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/html.svg" alt="" />HTML/CSS</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/csharp.svg" alt="" />C#</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/php.svg" alt="" />PHP</li>
+							<li class="flex gap-[5px] items-center"><img src="./images/yaml.svg" alt="" />YAML</li>
 						</ul>
 
 						<p class="text-[#0098FF] mt-5 text-center"><a href="#">and many more languages on the Marketplace...</a></p>
@@ -334,13 +351,11 @@
 			</div>
 		</section>
 
-		<section class="alt-downloads bg-bg-2">
+		<section class="alt-downloads bg-bg-2 w-full">
 			<div class="container">
-				<div class="py-12 text-center">
-					<div class="alt-downloads__item">
-						
-						<img src="./images/windows-logo.png" class="m-auto block w-[20%] mb-5" alt="" />
-						
+				<div class="py-12 text-center md:grid md:grid-cols-2 lg:flex lg:justify-center">
+					<div class="alt-downloads__item inline-block px-[25px]">
+						<img src="./images/windows-logo.png" class="m-auto block w-[100px] h-[100px] mb-5" alt="" />
 
 						<button class="bg-[#0066b8] px-16 py-3 text-center text-bg-2">
 							<div class="flex gap-4">
@@ -352,7 +367,7 @@
 						</button>
 
 						<ul class="my-5">
-							<li class="flex justify-center items-center gap-4 pl-2 text-[14px] font-bold">
+							<li class="flex justify-center items-center gap-5 pl-2 text-[14px] font-bold">
 								User Installer
 								<div class="flex gap-1 text-white text-[12px] font-normal">
 									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
@@ -387,8 +402,8 @@
 						</ul>
 					</div>
 
-					<div class="alt-downloads__item">
-						<img src="./images/linux-logo.png" class="m-auto block w-[20%] mb-5" alt="" />
+					<div class="alt-downloads__item inline-block px-[25px]">
+						<img src="./images/linux-logo.png" class="m-auto block w-[100px] h-[100px] mb-5" alt="" />
 
 						<div class="flex gap-2 justify-center">
 							<button class="bg-[#0066b8] px-10 py-3 text-center text-bg-2">
@@ -396,15 +411,15 @@
 									<i class="fa fa-download"></i>
 									<h1>.deb</h1>
 								</div>
-								
+
 								<p class="text-[10px]">Debian, Ubuntu</p>
 							</button>
 							<button class="bg-[#0066b8] px-6 py-3 text-bg-2">
-								<div class="flex gap-4  justify-center">
+								<div class="flex gap-4 justify-center">
 									<i class="fa fa-download"></i>
 									<h1>.rpm</h1>
 								</div>
-								
+
 								<p class="text-[10px]">Red Hat, Fedora, SUSE</p>
 							</button>
 						</div>
@@ -440,7 +455,7 @@
 									<p class="bg-[#0066b8] rounded-sm px-0.5">Snap Store</p>
 								</div>
 							</li>
-							<li class="flex justify-center items-center gap-4 pl-4 text-[14px] font-bold">
+							<li class="flex justify-center items-center gap-4 pl-4 text-[14px] font-bold mt-4">
 								CLI
 								<div class="flex gap-1 text-white text-[12px] font-normal">
 									<p class="bg-[#0066b8] rounded-sm px-0.5">x64</p>
@@ -451,15 +466,15 @@
 						</ul>
 					</div>
 
-					<div class="alt-downloads__item">
-						<img src="./images/apple-logo.svg" class="m-auto block w-[20%] mb-5" alt="" />
+					<div class="alt-downloads__item inline-block px-[25px]">
+						<img src="./images/apple-logo.svg" class="m-auto block w-[100px] h-[100px] mb-5" alt="" />
 
 						<button class="bg-[#0066b8] px-24 py-3 text-center text-bg-2">
 							<div class="flex gap-4 justify-center">
 								<i class="fa fa-download"></i>
 								<h1>Mac</h1>
 							</div>
-						
+
 							<p class="text-[10px]">macOS 10.11+</p>
 						</button>
 
@@ -472,7 +487,7 @@
 									<p class="bg-[#0066b8] rounded-sm px-0.5">Universal</p>
 								</div>
 							</li>
-							<li class="flex justify-center items-center gap-2 mr-14 text-[14px] font-bold">
+							<li class="flex justify-center items-center gap-2 mr-14 text-[14px] font-bold mt-4">
 								CLI
 								<div class="flex gap-1 text-white text-[12px] font-normal">
 									<p class="bg-[#0066b8] rounded-sm px-0.5">Intel chip</p>
@@ -487,25 +502,28 @@
 
 		<section class="license-privacy bg-bg-3">
 			<div class="container">
-				<div class="license-privacy__wrapper py-[50px] px-[19%] text-center">
-					<div class="flex flex-col">
-						<div>
+				<div class="license-privacy__wrapper py-[50px] px-[19%] text-center lg:px-24">
+					<div class="flex flex-col lg:flex-row lg:items-center lg:gap-20 lg:pb-32">
+						<div class="lg:w-[50%] lg:float-left px-[30px]">
 							<h1 class="font-bold text-[18px]">Want new features sooner?</h1>
-							<h3>Get the <a href="#">Insiders build</a> instead.</h3>
+							<h3>Get the <a href="#" class="text-[#0066b8]">Insiders build</a> instead.</h3>
 						</div>
 
-						<div class="my-32">
-							<h1 class="font-bold text-[18px]">Use <a href="#" class="text-[#0066b8]">vscode.dev</a> for quick edits online!</h1>
+						<div class="my-32 lg:my-0 lg:w-[50%] lg:float-left px-[30px]">
+							<h1 class="font-bold text-[18px]">
+								Use <a href="#" class="text-[#0066b8]">vscode.dev</a> for quick edits online!
+							</h1>
 							<h3>GitHub, Azure Repos, and local files.</h3>
 						</div>
 					</div>
 
-					<div>
+					<div class="px-[15%]">
 						<h4 class="text-[14px] font-bold">License and Privacy Terms</h4>
 						<p class="text-[12px] leading-8">
-							By downloading and using Visual Studio Code, you agree to the <a href="#" class="text-[#0066b8]">license terms</a> and
-							<a href="#" class="text-[#0066b8]">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us
-							improve the product. If you would prefer not to have this data sent please go see
+							By downloading and using Visual Studio Code, you agree to the
+							<a href="#" class="text-[#0066b8]">license terms</a> and
+							<a href="#" class="text-[#0066b8]">privacy statement</a>. VS Code automatically sends telemetry data and
+							crash dumps to help us improve the product. If you would prefer not to have this data sent please go see
 							<a href="#" class="text-[#0066b8]">How to Disable Crash Reporting</a> to learn how to disable it.
 						</p>
 					</div>
@@ -513,37 +531,47 @@
 			</div>
 		</section>
 
-		<footer class="footer bg-bg-1">
+		<footer class="footer bg-[#333333]">
 			<div class="container">
-				<div class="footer__wrapper text-white">
+				<div class="footer__wrapper text-white py-7 lg:flex lg:items-center lg:justify-between lg:py-0 lg:pb-5">
 					<div class="left">
-						<ul class="flex gap-5">
-							<li class="hidden">Hello from Seattle.</li>
-							<li class="text-[14px]"><a href="#">Follow @code</a></li>
-							<li>
-								<a href="#"><i class="fas fa-times"></i>Star</a>
-							</li>
-							<li><a href="#">148,221</a></li>
-						</ul>
+						<div class="flex gap-6 ml-6">
+							<div class="flex gap-2">
+								<p class="text-[14px] hidden lg:block">Hello from Seattle.</p>
+								<p class="text-[14px]"><a href="#">Follow @code</a></p>
+							</div>
+							<div class="flex gap-1">
+								<a
+									href="#"
+									class="flex items-center gap-2 text-black bg-[#fafafa] text-[12px] px-2 rounded-sm font-[600]"
+								>
+									<i class="fa-brands fa-github"></i>
+									<p>Star</p>
+								</a>
+								<p class="tusok bg-[#fafafa] text-black text-[12px] px-2 flex items-center rounded-sm font-[600]">
+									<a href="#">148,221</a>
+								</p>
+							</div>
+						</div>
 					</div>
 
-					<div class="right flex justify-between">
-						<ul class="text-[12px] flex gap-5 flex-wrap">
+					<div class="flex items-center">
+						<ul class="text-[12px] flex flex-wrap gap-5 mt-7">
 							<li><a href="#">Support</a></li>
 							<li><a href="#">Privacy</a></li>
 							<li><a href="#">Terms of Use</a></li>
 							<li><a href="#">License</a></li>
+							<li>
+								<a href="#"><img src="./images/microsoft-logo.png" class="block w-24" alt="" /></a>
+								<p>© 2023 Microsoft</p>
+							</li>
 						</ul>
-
-						<div class="flex flex-col">
-							<a href="#"><img src="./images/microsoft-logo.png" class="block m-auto w-[15%]" alt="" /></a>
-							<span>© 2023 Microsoft</span>
-						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 		<script src="./script.js"></script>
 	</body>
 </html>
