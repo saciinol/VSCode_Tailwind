@@ -18,7 +18,7 @@
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 15px solid #25252b;
-	left: 228px;
+	left: 255px;
 	bottom: 32px;
 }
 
@@ -29,6 +29,46 @@
 	border-bottom: 4px solid transparent;
 	border-right: 4px solid #fafafa;
 	right: 11px;
+}
+
+.tns-controls {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	top: 20rem;
+}
+
+.tns-controls button {
+	font-size: 30px;
+	color: #777;
+}
+
+@media (min-width: 768px) {
+	.tns-controls {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		top: 12rem;
+	}	
+}
+
+@media (min-width: 1024px) {
+	.platform::before {
+		content: '';
+		position: relative;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 15px solid #25252b;
+		left: 227px;
+		bottom: 32px;
+	}
+
+	.tns-controls {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		top: 6rem;
+	}	
 }
 
 @layer components {
