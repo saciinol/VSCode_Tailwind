@@ -81,11 +81,11 @@
 	}
 
 	.chevron__down {
-		@apply bg-white text-black text-[13px] border-2  border-[#0066b8] w-[350px] h-[220px] absolute bottom-full left-[49px] z-50 md:left-[223px] lg:left-[45px] xl:left-[340px];
+		@apply bg-white text-black text-[13px] border-2  border-[#0066b8] w-[350px] h-[220px] absolute bottom-full left-[49px] z-50 md:left-[223px] lg:left-[45px] xl:left-[340px] top-[354px] md:top-[331px] lg:top-[407px] xl:top-[359px] hidden;
 	}
 
 	.chevron__down.open {
-		@apply top-[354px] md:top-[331px] lg:top-[407px] xl:top-[359px];
+		@apply block;
 	}
 
 	.use__item {
