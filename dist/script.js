@@ -5,6 +5,13 @@ toggle.addEventListener('click', () => {
 	headNav.classList.toggle('open')
 })
 
+const chevronDown = document .querySelector('.toggle-chevron')
+const download = document .querySelector('.chevron__down')
+
+chevronDown.addEventListener('click', () => {
+	download.classList.toggle('open')
+})
+
 var slider = tns({
 	container: '.reviews__slider',
 	items: 1,
