@@ -619,7 +619,7 @@ video {
 
 @media (min-width: 1200px){
   .chevron__down{
-    left: 340px;
+    left: 425.5px;
     top: 359px;
   }
 }
@@ -725,6 +725,13 @@ video {
 @media (min-width: 1200px) {
   .use__content {
     width: 1200px;
+  }
+
+  .use__item {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 80px;
+    padding-bottom: 140px;
   }
 
   .use__item:nth-child(odd) img {
