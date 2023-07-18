@@ -1477,9 +1477,19 @@ video {
   text-decoration-line: none;
 }
 
+.focus\:bg-\[\#005892\]:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 88 146 / var(--tw-bg-opacity));
+}
+
 .focus\:bg-\[\#0066b8\]:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(0 102 184 / var(--tw-bg-opacity));
+}
+
+.active\:bg-\[\#005892\]:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 88 146 / var(--tw-bg-opacity));
 }
 
 .active\:bg-\[\#0066b8\]:active{
