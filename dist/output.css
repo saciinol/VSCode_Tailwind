@@ -591,14 +591,14 @@ video {
   top: 354px;
   z-index: 50;
   display: none;
-  height: 220px;
-  width: 350px;
+  height: 230px;
+  width: 338px;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(0 102 184 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  font-size: 13px;
+  font-size: 14px;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
@@ -900,10 +900,6 @@ video {
 
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -1229,6 +1225,10 @@ video {
 
 .text-center{
   text-align: center;
+}
+
+.text-start{
+  text-align: start;
 }
 
 .font-body{
