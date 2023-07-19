@@ -12,66 +12,27 @@
 	@apply m-0 p-0 box-border;
 }
 
-.platform::before {
-	content: '';
-	position: relative;
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
-	border-bottom: 15px solid #25252b;
-	left: 255px;
-	bottom: 32px;
-}
-
-.tusok::before {
-	content: '';
-	position: relative;
-	border-top: 4px solid transparent;
-	border-bottom: 4px solid transparent;
-	border-right: 4px solid #fafafa;
-	right: 11px;
+.tns-outer {
+	@apply relative;
 }
 
 .tns-controls {
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-	top: 20rem;
+	@apply flex items-center justify-between absolute top-[15rem] left-[-.3rem] w-[29rem] md:top-[8rem] md:w-[46.8rem] lg:top-[5rem] lg:w-[62.7rem] xl:top-[3rem] xl:left-[-2rem] xl:w-[77rem];
 }
-
+ 
 .tns-controls button {
-	font-size: 30px;
-	color: #777;
-}
-
-@media (min-width: 768px) {
-	.tns-controls {
-		display: flex;
-		justify-content: space-between;
-		position: relative;
-		top: 12rem;
-	}
-}
-
-@media (min-width: 1024px) {
-	.platform::before {
-		content: '';
-		position: relative;
-		border-left: 15px solid transparent;
-		border-right: 15px solid transparent;
-		border-bottom: 15px solid #25252b;
-		left: 227px;
-		bottom: 32px;
-	}
-
-	.tns-controls {
-		display: flex;
-		justify-content: space-between;
-		position: relative;
-		top: 6rem;
-	}
+	@apply text-[30px] text-[#777];
 }
 
 @layer components {
+	.platform {
+		@apply before:content-[""] before:relative before:border-l-[15px] before:border-r-[15px] before:border-b-[15px] before:border-solid before:border-transparent before:left-[265px] before:bottom-[32px] before:border-b-[#25252b] lg:before:left-[235px];
+	}
+
+	.tusok {
+		@apply before:content-[""] before:relative before:border-b-[4px] before:border-t-[4px] before:border-r-[4px] before:border-r-[#fafafa] before:border-solid before:border-transparent before:right-[11px];
+	}
+
 	.header__nav {
 		@apply bg-bg-1 w-screen h-[340px] absolute bottom-52 left-0 ease-in duration-300 overflow-y-scroll lg:w-auto lg:h-auto lg:static lg:overflow-y-hidden;
 	}
@@ -81,7 +42,7 @@
 	}
 
 	.chevron__down {
-		@apply bg-white text-black text-[14px] border-2  border-[#0066b8] w-[338px] h-[230px] absolute bottom-full left-[49px] z-50 md:left-[223px] lg:left-[45px] xl:left-[425.5px] top-[354px] md:top-[331px] lg:top-[407px] xl:top-[359px] hidden;
+		@apply bg-white text-black text-[14px] border-2 border-[#0066b8] w-[338px] h-[230px] z-10 whitespace-nowrap absolute hidden;
 	}
 
 	.chevron__down.open {

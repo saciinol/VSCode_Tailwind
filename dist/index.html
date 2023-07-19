@@ -13,9 +13,9 @@
 			<div class="container">
 				<div class="header__wrapper lg:flex lg:items-center">
 					<div class="flex justify-between items-center py-3">
-						<div class="header__logo flex gap-3 items-center cursor-pointer">
+						<div class="header__logo flex gap-3 items-center cursor-pointer flex-nowrap">
 							<img class="h-6 w-6" src="./images/header-logo.png" alt="" />
-							<h1 class="text-xl">Visual Studio Code</h1>
+							<h1 class="text-xl whitespace-nowrap">Visual Studio Code</h1>
 						</div>
 
 						<button
@@ -28,7 +28,7 @@
 					</div>
 
 					<nav class="header__nav">
-						<ul class="flex flex-col gap-4 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#9d9d9d]">
+						<ul class="flex flex-col gap-4 lg:gap-6 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#9d9d9d]">
 							<li class="hover:lg:text-[#ffffff]"><a href="#">Docs</a></li>
 							<li class="hover:lg:text-[#ffffff]"><a href="#">Updates</a></li>
 							<li class="hover:lg:text-[#ffffff]"><a href="#">Blog</a></li>
@@ -44,7 +44,7 @@
 						</div>
 					</nav>
 
-					<div class="header__search-download hidden lg:flex items-center ml-[183px] gap-4 xl:ml-[170px] xl:gap-0">
+					<div class="header__search-download hidden lg:flex items-center ml-[183px] gap-4 lg:ml-[130px] xl:ml-[130px] xl:gap-0">
 						<div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white">
 							<i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
 						</div>
@@ -75,19 +75,23 @@
 			<div class="container">
 				<div class="banner__wrapper pt-7 lg:flex lg:items-center lg:justify-center lg:gap-6 lg:py-7 xl:items-start">
 					<div class="banner__intro text-bg-2 text-center lg:w-[800px] xl:mt-7">
-						<h1 class="text-[42px] leading-[50px]">Code editing.<br />Redefined.</h1>
-						<p class="text-[#ffffff99] my-2 text-[14px]">Free. Built on open source. Runs everywhere.</p>
+						<div>
+							<h1 class="text-[42px] leading-[50px]">Code editing.<br />Redefined.</h1>
+							<p class="text-[#ffffff99] my-2 text-[14px]">Free. Built on open source. Runs everywhere.</p>
+						</div>
 
-						<div class="flex gap-0.5 items-center justify-center py-2">
-							<button class="bg-[#0066b8] px-12 py-2 lg:px-5 hover:bg-[#005892]">
-								<h1 class="font-bold">Download for Windows</h1>
-								<p class="text-[12px]">Stable Build</p>
-							</button>
-
-							<button class="toggle-chevron bg-[#0066b8] py-[17px] px-3 hover:bg-[#005892] active:bg-[#005892] focus:bg-[#005892]">
-								<i class="fa-solid fa-chevron-down"></i>
-							</button>
-
+						<div class="max-w-[323px] m-auto block lg:max-w-[267px]">
+							<div class="flex gap-0.5 items-center pt-2">
+								<button class="bg-[#0066b8] px-12 py-2 lg:px-5 inline-block hover:bg-[#005892]">
+									<h1 class="font-bold whitespace-nowrap">Download for Windows</h1>
+									<p class="text-[12px]">Stable Build</p>
+								</button>
+	
+								<button class="toggle-chevron bg-[#0066b8] py-[17px] px-3 hover:bg-[#005892] active:bg-[#005892] focus:bg-[#005892]">
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+	
 							<div class="chevron__down">
 								<table>
 									<tr>
@@ -96,28 +100,28 @@
 										<td class="px-2 pt-2">Stable</td>
 										<td class="px-2 pt-2 bg-[#ebebeb]">Insiders</td>
 									</tr>
-
+	
 									<tr>
 										<td class="px-2 py-2 font-bold text-start">macOS</td>
 										<td class="px-2 py-2 text-start">Universal</td>
 										<td class="px-2 py-2"><i class="fa fa-download text-[#0066b8] cursor-pointer"></i></td>
 										<td class="px-2 py-2 bg-[#ebebeb]"><i class="fa fa-download text-black cursor-pointer"></i></td>
 									</tr>
-
+	
 									<tr>
 										<td class="px-2 py-2 border-t-[1px] border-[#ccc] font-bold text-start">Windows x64</td>
 										<td class="px-2 py-2 border-t-[1px] border-[#ccc] text-start">User Installer</td>
 										<td class="px-2 py-2 border-t-[1px] border-[#ccc]"><i class="fa fa-download text-[#0066b8] cursor-pointer"></i></td>
 										<td class="px-2 py-2 border-t-[1px] border-[#ccc] bg-[#ebebeb]"><i class="fa fa-download text-black cursor-pointer"></i></td>
 									</tr>
-
+	
 									<tr>
 										<td class="px-2 pt-2 border-t-[1px] border-[#ccc] font-bold text-start">Linux x64</td>
 										<td class="px-2 pt-2 border-t-[1px] border-[#ccc] text-start">.deb</td>
 										<td class="px-2 pt-2 border-t-[1px] border-[#ccc]"><i class="fa fa-download text-[#0066b8] cursor-pointer"></i></td>
 										<td class="px-2 pt-2 border-t-[1px] border-[#ccc] bg-[#ebebeb]"><i class="fa fa-download text-black cursor-pointer"></i></td>
 									</tr>
-
+	
 									<tr>
 										<td class="px-2 pb-2 pt-2"></td>
 										<td class="px-2 pb-2 text-start">.rpm</td>
@@ -125,7 +129,7 @@
 										<td class="px-2 pb-2 bg-[#ebebeb]"><i class="fa fa-download text-black cursor-pointer"></i></td>
 									</tr>
 								</table>
-
+	
 								<p class="py-2 border-t-[1px] border-[#ccc]">
 									<a href="" class="text-[#0066b8] hover:underline">Other Downloads<br /></a> or
 									<a href="" class="text-[#0066b8] hover:underline">open on web</a>
@@ -133,11 +137,11 @@
 							</div>
 						</div>
 
-						<div class="flex justify-center my-1">
-							<p class="platform bg-[#25252B] px-8 py-2 text-[12px] text-center rounded-md lg:px-2">
+						<div class="flex justify-center my-1 pt-2">
+							<p class="platform bg-[#25252B] py-2 text-[12px] text-center rounded-md pr-[40px] pl-[20px] lg:pr-[0px] lg:pl-[0px]">
 								<a href="#" class="text-[#0098ff] hover:underline">Web</a>,
 								<a href="#" class="text-[#0098ff] hover:underline">Insiders edition</a>, or
-								<a href="#" class="text-[#0098ff] hover:underline">other platforms</a>
+								<a href="#" class="text-[#0098ff] hover:underline lg:pr-[15px]">other platforms</a>
 							</p>
 						</div>
 
@@ -186,7 +190,7 @@
 			</div>
 		</section>
 
-		<section class="reviews bg-bg-3 py-10 xl:py-0 xl:pb-20 xl:pt-10">
+		<section class="reviews bg-bg-3 py-10 xl:py-0 xl:pb-20 xl:pt-16">
 			<div class="container">
 				<div class="reviews__slider">
 					<div class="reviews__content">

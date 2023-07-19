@@ -19,5 +19,4 @@ var slider = tns({
 	autoplay: false,
 	controlsText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
 	nav: false,
-	mouseDrag: true,
 })
