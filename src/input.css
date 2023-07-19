@@ -17,20 +17,29 @@
 }
 
 .tns-controls {
-	@apply flex items-center justify-between absolute top-[15rem] left-[-.3rem] w-[29rem] md:top-[8rem] md:w-[46.8rem] lg:top-[5rem] lg:w-[62.7rem] xl:top-[3rem] xl:left-[-2rem] xl:w-[77rem] z-20;
+	@apply flex items-center justify-between absolute top-[40%] left-[2rem] w-[88%] md:top-[9rem] md:w-[42rem] lg:top-[5rem] lg:w-[58.5rem] xl:top-[3rem] xl:left-[1.5rem] xl:w-[70rem] z-20;
 }
- 
+
 .tns-controls button {
-	@apply text-[30px] text-[#777];
+	@apply text-[25px] text-[#777];
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+	@apply hover:text-[#9c9c9c];
 }
 
 @layer components {
+	.header.active {
+		@apply shadow-[0_3px_3px_0_rgba(0,0,0,0.33)] duration-[.5s];
+	}
+
 	.platform {
 		@apply before:content-[""] before:relative before:border-l-[15px] before:border-r-[15px] before:border-b-[15px] before:border-solid before:border-transparent before:left-[265px] before:bottom-[32px] before:border-b-[#25252b] lg:before:left-[235px];
 	}
 
 	.tusok {
-		@apply before:content-[""] before:relative before:border-b-[4px] before:border-t-[4px] before:border-r-[4px] before:border-r-[#fafafa] before:border-solid before:border-transparent before:right-[11px];
+		@apply before:content-[""] before:relative before:border-b-[4px] before:border-t-[4px] before:border-r-[4px] before:border-r-[#fafafa] before:border-solid before:border-transparent before:right-[3px];
 	}
 
 	.header__nav {
@@ -80,6 +89,10 @@
 		.use__text a {
 			color: #0098ff;
 		}
+
+		.use__text a:hover {
+			text-decoration: underline;
+		}
 	}
 
 	.use__item:nth-child(odd) {
@@ -88,6 +101,12 @@
 
 	.use__item:nth-child(even) {
 		background-color: #f5f5f5;
+	}
+
+	.use__item:nth-child(4) img:hover {
+		transform: scale(1.05);
+		transition: 0.8s;
+		cursor: pointer;
 	}
 
 	@media (min-width: 768px) {

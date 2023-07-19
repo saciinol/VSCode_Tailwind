@@ -28,15 +28,15 @@
 					</div>
 
 					<nav class="header__nav">
-						<ul class="flex flex-col gap-4 lg:gap-6 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#9d9d9d]">
-							<li class="hover:lg:text-[#ffffff]"><a href="#">Docs</a></li>
-							<li class="hover:lg:text-[#ffffff]"><a href="#">Updates</a></li>
-							<li class="hover:lg:text-[#ffffff]"><a href="#">Blog</a></li>
-							<li class="hover:lg:text-[#ffffff]"><a href="#">API</a></li>
-							<li class="hover:lg:text-[#ffffff]"><a href="#">Extensions</a></li>
-							<li class="hover:lg:text-[#ffffff]"><a href="#">FAQ</a></li>
-							<li class="hover:lg:text-[#ffffff]"><a href="#">Learn</a></li>
-							<li class="lg:hidden"><a href="#">Search</a></li>
+						<ul class="flex flex-col gap-4 lg:gap-5 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#9d9d9d]">
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Docs</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Updates</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Blog</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">API</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Extensions</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">FAQ</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Learn</li></a>
+							<a href="#"><li class="lg:hidden">Search</li></a>
 						</ul>
 
 						<div class="bg-[#0066b8] p-4 mt-4 lg:hidden hover:bg-[#005892]">
@@ -45,7 +45,7 @@
 					</nav>
 
 					<div class="header__search-download hidden lg:flex items-center ml-[183px] gap-4 lg:ml-[130px] xl:ml-[130px] xl:gap-0">
-						<div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white">
+						<div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white hover:text-white cursor-pointer">
 							<i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
 						</div>
 						<input
@@ -163,24 +163,24 @@
 			<div class="container">
 				<div class="value-props__content">
 					<ul class="grid grid-cols-2 gap-6 md:grid-cols-4">
-						<div class="group">
+						<div class="group cursor-pointer">
 							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
 								<i class="fa-regular fa-lightbulb text-[42px] text-[#242424] group-hover:text-[#491e99]"></i
 								>IntelliSense
 							</li>
 						</div>
-						<div class="group">
+						<div class="group cursor-pointer">
 							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
 								<i class="fa fa-play text-[42px] text-[#242424] group-hover:text-[#3ed17b]"></i>Run and Debug
 							</li>
 						</div>
-						<div class="group">
+						<div class="group cursor-pointer">
 							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
 								<i class="fa-solid fa-code-branch text-[42px] text-[#242424] group-hover:text-[#f83a3a]"></i>Built-in
 								Git
 							</li>
 						</div>
-						<div class="group">
+						<div class="group cursor-pointer">
 							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
 								<i class="fa fa-table-cells-large text-[42px] text-[#242424] group-hover:text-[#000000]"></i>Extensions
 							</li>
@@ -193,7 +193,7 @@
 		<section class="reviews bg-bg-3 py-10 xl:py-0 xl:pb-20 xl:pt-16">
 			<div class="container">
 				<div class="reviews__slider">
-					<div class="reviews__content">
+					<div class="reviews__group">
 						<div class="reviews__item px-[50px] lg:flex gap-[20px]">
 							<div class="reviews__content flex justify-start gap-2 p-[10px]">
 								<img src="./images/Una.jpg" class="w-[72px] h-[72px] rounded-full cursor-pointer" alt="" />
@@ -258,7 +258,7 @@
 						</div>
 					</div>
 
-					<div class="reviews__content">
+					<div class="reviews__group">
 						<div class="reviews__item px-[50px] lg:flex gap-[20px]">
 							<div class="reviews__content flex justify-start gap-2 p-[10px]">
 								<img src="./images/MrDarrenV.jpg" class="w-[72px] h-[72px] rounded-full cursor-pointer" alt="" />
@@ -648,13 +648,13 @@
 							<div class="flex gap-1">
 								<a
 									href="#"
-									class="flex items-center gap-2 text-black bg-[#fafafa] text-[12px] px-2 rounded-sm font-[600] hover:bg-[#ccc]"
+									class="flex items-center gap-2 text-black bg-[#fafafa] text-[12px] px-1 rounded-[4px] font-[600] hover:bg-[#ccc]"
 								>
 									<i class="fa-brands fa-github"></i>
 									<p>Star</p>
 								</a>
 								<p
-									class="tusok bg-[#fafafa] text-black text-[12px] px-2 flex items-center rounded-sm font-[600] hover:text-[#0066b8]"
+									class="tusok bg-[#fafafa] text-black text-[12px] pr-0.5 flex items-center rounded-[4px] font-[600] hover:text-[#0066b8]"
 								>
 									<a href="#">148,221</a>
 								</p>
