@@ -17,7 +17,7 @@
 }
 
 .tns-controls {
-	@apply flex items-center justify-between absolute top-[15rem] left-[-.3rem] w-[29rem] md:top-[8rem] md:w-[46.8rem] lg:top-[5rem] lg:w-[62.7rem] xl:top-[3rem] xl:left-[-2rem] xl:w-[77rem];
+	@apply flex items-center justify-between absolute top-[15rem] left-[-.3rem] w-[29rem] md:top-[8rem] md:w-[46.8rem] lg:top-[5rem] lg:w-[62.7rem] xl:top-[3rem] xl:left-[-2rem] xl:w-[77rem] z-20;
 }
  
 .tns-controls button {

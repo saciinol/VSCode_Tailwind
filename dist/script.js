@@ -5,8 +5,8 @@ toggle.addEventListener('click', () => {
 	headNav.classList.toggle('open')
 })
 
-const chevronDown = document .querySelector('.toggle-chevron')
-const download = document .querySelector('.chevron__down')
+const chevronDown = document.querySelector('.toggle-chevron')
+const download = document.querySelector('.chevron__down')
 
 chevronDown.addEventListener('click', () => {
 	download.classList.toggle('open')

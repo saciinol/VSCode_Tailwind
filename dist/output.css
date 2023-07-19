@@ -1425,6 +1425,7 @@ video {
   position: absolute;
   top: 15rem;
   left: -.3rem;
+  z-index: 20;
   display: flex;
   width: 29rem;
   align-items: center;
