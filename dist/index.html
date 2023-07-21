@@ -10,55 +10,57 @@
 	</head>
 	<body class="font-body overflow-x-hidden">
 		<header class="header bg-bg-1 text-bg-2 z-[999] fixed w-full">
-			<div class="header__wrapper mx-auto w-full px-[15px] lg:max-w-[1024px] xl:max-w-[1200px] lg:flex lg:items-center lg:justify-between">
+			<div
+				class="header__wrapper mx-auto w-full px-[15px] lg:max-w-[1024px] xl:max-w-[1200px] lg:flex lg:items-center lg:justify-between"
+			>
 				<div class="lg:flex lg:items-center">
-                       <div class="flex justify-between items-center py-3">
-                           <div class="header__logo flex gap-3 items-center cursor-pointer flex-nowrap">
-                               <img class="h-6 w-6" src="./images/header-logo.png" alt="" />
-                               <h1 class="text-xl whitespace-nowrap">Visual Studio Code</h1>
-                           </div>
-    
-                           <button
-                               class="toggle-menu flex flex-col gap-1 py-2 px-[10px] rounded-[4px] hover:bg-[#0066b8] active:bg-[#0066b8] focus:bg-[#0066b8] lg:hidden"
-                           >
-                               <span class="w-5 h-0.5 bg-bg-2 block"></span>
-                               <span class="w-5 h-0.5 bg-bg-2 block"></span>
-                               <span class="w-5 h-0.5 bg-bg-2 block"></span>
-                           </button>
-                       </div>
-    
-                       <nav class="header__nav">
-                           <ul class="flex flex-col gap-4 lg:gap-5 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#b1b1b1]">
-                               <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Docs</li></a>
-                               <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Updates</li></a>
-                               <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Blog</li></a>
-                               <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">API</li></a>
-                               <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Extensions</li></a>
-                               <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">FAQ</li></a>
-                               <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Learn</li></a>
-                               <a href="#"><li class="lg:hidden">Search</li></a>
-                           </ul>
-    
-                           <div class="bg-[#0066b8] p-4 mt-4 lg:hidden hover:bg-[#005892]">
-                               <button class="flex items-center gap-2 ml-3"><i class="fa fa-download"></i>Download</button>
-                           </div>
-                       </nav>
-                   </div>
+					<div class="flex justify-between items-center py-3">
+						<div class="header__logo flex gap-3 items-center cursor-pointer flex-nowrap">
+							<img class="h-6 w-6" src="./images/header-logo.png" alt="" />
+							<h1 class="text-xl whitespace-nowrap">Visual Studio Code</h1>
+						</div>
 
-                   <div class="header__search-download hidden lg:flex items-center gap-4 xl:gap-0">
-                       <div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white hover:text-white cursor-pointer py-3">
-                           <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
-                       </div>
-                       <input
-                           type="text"
-                           placeholder="Search Docs"
-                           class="w-[190px] py-[13px] px-10 lg:hidden xl:block rounded-none bg-[#3d3d42] hover:bg-[#5e5e5e] outline-none border-[0.5px] border-transparent focus:border-[0.5px] focus:border-[#9e9e9e] hover:border-[#7e7e7e]"
-                       />
-                       <button class="bg-[#0066b8] py-[14px] px-5 flex items-center gap-3 hover:bg-[#005892]">
-                           <i class="fa fa-download"></i>
-                           <p>Download</p>
-                       </button>
-                   </div>
+						<button
+							class="toggle-menu flex flex-col gap-1 py-2 px-[10px] rounded-[4px] hover:bg-[#0066b8] active:bg-[#0066b8] focus:bg-[#0066b8] lg:hidden"
+						>
+							<span class="w-5 h-0.5 bg-bg-2 block"></span>
+							<span class="w-5 h-0.5 bg-bg-2 block"></span>
+							<span class="w-5 h-0.5 bg-bg-2 block"></span>
+						</button>
+					</div>
+
+					<nav class="header__nav">
+						<ul class="flex flex-col gap-4 lg:gap-5 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#b1b1b1]">
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Docs</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Updates</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Blog</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">API</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Extensions</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">FAQ</li></a>
+							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Learn</li></a>
+							<a href="#"><li class="lg:hidden">Search</li></a>
+						</ul>
+
+						<div class="bg-[#0066b8] p-4 mt-4 lg:hidden hover:bg-[#005892]">
+							<button class="flex items-center gap-2 ml-3"><i class="fa fa-download"></i>Download</button>
+						</div>
+					</nav>
+				</div>
+
+				<div class="header__search-download hidden lg:flex items-center gap-4 xl:gap-0">
+					<div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white hover:text-white cursor-pointer py-3">
+						<i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+					</div>
+					<input
+						type="text"
+						placeholder="Search Docs"
+						class="w-[190px] py-[13px] px-10 lg:hidden xl:block rounded-none bg-[#3d3d42] hover:bg-[#5e5e5e] outline-none border-[0.5px] border-transparent focus:border-[0.5px] focus:border-[#9e9e9e] hover:border-[#7e7e7e]"
+					/>
+					<button class="bg-[#0066b8] py-[14px] px-5 flex items-center gap-3 hover:bg-[#005892]">
+						<i class="fa fa-download"></i>
+						<p>Download</p>
+					</button>
+				</div>
 			</div>
 		</header>
 
@@ -255,7 +257,9 @@
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
 										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold whitespace-nowrap">Pavithra Kodmad</h6>
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold whitespace-nowrap">
+												Pavithra Kodmad
+											</h6>
 											<small class="cursor-pointer text-[#707070]">@PKodmad</small>
 										</span>
 
@@ -320,7 +324,9 @@
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
 										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold whitespace-nowrap">Gift Egwuenu</h6>
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold whitespace-nowrap">
+												Gift Egwuenu
+											</h6>
 											<small class="cursor-pointer text-[#707070]">@lauragift21</small>
 										</span>
 
@@ -650,42 +656,43 @@
 		</section>
 
 		<footer class="footer bg-[#333333]">
-			<div class="container">
-				<div class="footer__wrapper text-white py-7 lg:flex lg:items-center lg:justify-between lg:py-0 lg:pb-5">
-					<div class="left">
-						<div class="flex gap-6 ml-6">
-							<div class="flex gap-2">
-								<p class="text-[14px] hidden lg:block">Hello from Seattle.</p>
-								<p class="text-[14px] hover:text-[#989ffd]"><a href="#">Follow @code</a></p>
-							</div>
-							<div class="flex gap-1">
-								<a
-									href="#"
-									class="flex items-center gap-2 text-black bg-[#fafafa] text-[12px] px-1 rounded-[4px] font-[600] hover:bg-[#ccc]"
-								>
-									<i class="fa-brands fa-github"></i>
-									<p>Star</p>
-								</a>
-								<p
-									class="tusok bg-[#fafafa] text-black text-[12px] pr-0.5 flex items-center rounded-[4px] font-[600] hover:text-[#0066b8]"
-								>
-									<a href="#">148,221</a>
-								</p>
-							</div>
+			<div
+				class="footer__wrapper mx-auto w-full px-[15px] lg:max-w-[1024px] xl:max-w-[1200px] text-white py-7 pb-4 md:pb-5 lg:flex lg:items-baseline lg:justify-between lg:py-6 lg:pb-5 xl:pt-3 xl:pb-7"
+			>
+				<div class="left">
+					<div class="flex gap-6 ml-6 md:ml-0 lg:ml-6 xl:ml-0">
+						<div class="flex gap-5">
+							<p class="text-[14px] hidden md:block">Hello from Seattle.</p>
+							<p class="text-[14px] hover:text-[#989ffd]"><a href="#">Follow @code</a></p>
+						</div>
+						<div class="flex gap-1">
+							<a
+								href="#"
+								class="flex items-center gap-2 text-black bg-[#fafafa] text-[12px] px-1 rounded-[4px] font-[600] hover:bg-[#ccc]"
+							>
+								<i class="fa-brands fa-github"></i>
+								<p>Star</p>
+							</a>
+							<p
+								class="tusok bg-[#fafafa] text-black text-[12px] pr-0.5 flex items-center rounded-[4px] font-[600] hover:text-[#0066b8]"
+							>
+								<a href="#">148,221</a>
+							</p>
 						</div>
 					</div>
+				</div>
 
-					<div class="flex items-center">
-						<ul class="text-[12px] flex flex-wrap gap-5 mt-7">
-							<li class="hover:text-[#989ffd]"><a href="#">Support</a></li>
-							<li class="hover:text-[#989ffd]"><a href="#">Privacy</a></li>
-							<li class="hover:text-[#989ffd]"><a href="#">Terms of Use</a></li>
-							<li class="hover:text-[#989ffd]"><a href="#">License</a></li>
-							<li>
-								<a href="#"><img src="./images/microsoft-logo.png" class="block w-24" alt="" /></a>
-								<p>© 2023 Microsoft</p>
-							</li>
-						</ul>
+				<div class="flex lg:flex-col items-center mt-3 lg:items-end md:mt-3 lg:mt-0 lg:pb-6 xl:flex-row xl:items-center xl:pb-0">
+					<ul class="text-[12px] flex flex-wrap gap-5">
+						<li class="hover:text-[#989ffd]"><a href="#">Support</a></li>
+						<li class="hover:text-[#989ffd]"><a href="#">Privacy</a></li>
+						<li class="hover:text-[#989ffd]"><a href="#">Terms of Use</a></li>
+						<li class="hover:text-[#989ffd]"><a href="#">License</a></li>
+					</ul>
+
+					<div class="text-[12px] mt-[20px] ml-[33px] md:mt-[20px] lg:mt-[8px] xl:mt-[15px]">
+						<a href="#"><img src="./images/microsoft-logo.png" class="block w-24" alt="" /></a>
+						<p>© 2023 Microsoft</p>
 					</div>
 				</div>
 			</div>
