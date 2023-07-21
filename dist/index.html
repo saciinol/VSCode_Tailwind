@@ -11,62 +11,64 @@
 	<body class="font-body overflow-x-hidden">
 		<header class="header bg-bg-1 text-bg-2 z-[999] fixed w-full">
 			<div class="container">
-				<div class="header__wrapper lg:flex lg:items-center">
-					<div class="flex justify-between items-center py-3">
-						<div class="header__logo flex gap-3 items-center cursor-pointer flex-nowrap">
-							<img class="h-6 w-6" src="./images/header-logo.png" alt="" />
-							<h1 class="text-xl whitespace-nowrap">Visual Studio Code</h1>
-						</div>
+				<div class="header__wrapper lg:flex lg:items-center lg:justify-between">
+					<div class="lg:flex lg:items-center">
+                        <div class="flex justify-between items-center py-3">
+                            <div class="header__logo flex gap-3 items-center cursor-pointer flex-nowrap">
+                                <img class="h-6 w-6" src="./images/header-logo.png" alt="" />
+                                <h1 class="text-xl whitespace-nowrap">Visual Studio Code</h1>
+                            </div>
+    
+                            <button
+                                class="toggle-menu flex flex-col gap-1 py-2 px-[10px] rounded-[4px] hover:bg-[#0066b8] active:bg-[#0066b8] focus:bg-[#0066b8] lg:hidden"
+                            >
+                                <span class="w-5 h-0.5 bg-bg-2 block"></span>
+                                <span class="w-5 h-0.5 bg-bg-2 block"></span>
+                                <span class="w-5 h-0.5 bg-bg-2 block"></span>
+                            </button>
+                        </div>
+    
+                        <nav class="header__nav">
+                            <ul class="flex flex-col gap-4 lg:gap-5 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#b1b1b1]">
+                                <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Docs</li></a>
+                                <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Updates</li></a>
+                                <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Blog</li></a>
+                                <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">API</li></a>
+                                <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Extensions</li></a>
+                                <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">FAQ</li></a>
+                                <a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Learn</li></a>
+                                <a href="#"><li class="lg:hidden">Search</li></a>
+                            </ul>
+    
+                            <div class="bg-[#0066b8] p-4 mt-4 lg:hidden hover:bg-[#005892]">
+                                <button class="flex items-center gap-2 ml-3"><i class="fa fa-download"></i>Download</button>
+                            </div>
+                        </nav>
+                    </div>
 
-						<button
-							class="toggle-menu flex flex-col gap-1 p-2 rounded-md hover:bg-[#0066b8] active:bg-[#0066b8] focus:bg-[#0066b8] lg:hidden"
-						>
-							<span class="w-5 h-0.5 bg-bg-2 block"></span>
-							<span class="w-5 h-0.5 bg-bg-2 block"></span>
-							<span class="w-5 h-0.5 bg-bg-2 block"></span>
-						</button>
-					</div>
-
-					<nav class="header__nav">
-						<ul class="flex flex-col gap-4 lg:gap-5 pt-4 pl-[15px] lg:flex-row lg:pt-0 lg:pl-[20px] lg:text-[#9d9d9d]">
-							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Docs</li></a>
-							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Updates</li></a>
-							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Blog</li></a>
-							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">API</li></a>
-							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Extensions</li></a>
-							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">FAQ</li></a>
-							<a href="#"><li class="hover:lg:text-[#ffffff] lg:py-3">Learn</li></a>
-							<a href="#"><li class="lg:hidden">Search</li></a>
-						</ul>
-
-						<div class="bg-[#0066b8] p-4 mt-4 lg:hidden hover:bg-[#005892]">
-							<button class="flex items-center gap-2 ml-3"><i class="fa fa-download"></i>Download</button>
-						</div>
-					</nav>
-
-					<div
-						class="header__search-download hidden lg:flex items-center ml-[183px] gap-4 lg:ml-[130px] xl:ml-[130px] xl:gap-0"
-					>
-						<div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white hover:text-white cursor-pointer">
-							<i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
-						</div>
-						<input
-							type="text"
-							placeholder="Search Docs"
-							class="w-[190px] py-[13px] px-10 lg:hidden xl:block rounded-none bg-[#3d3d42] hover:bg-[#5e5e5e] outline-none border-[0.5px] border-transparent focus:border-[0.5px] focus:border-[#9e9e9e] hover:border-[#7e7e7e]"
-						/>
-						<button class="bg-[#0066b8] py-[14px] px-5 flex items-center gap-3 hover:bg-[#005892]">
-							<i class="fa fa-download"></i>
-							<p>Download</p>
-						</button>
-					</div>
+                    <div class="header__search-download hidden lg:flex items-center gap-4 xl:gap-0">
+                        <div class="text-[#9d9d9d] xl:relative xl:left-7 xl:text-white hover:text-white cursor-pointer py-3">
+                            <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+                        </div>
+                        <input
+                            type="text"
+                            placeholder="Search Docs"
+                            class="w-[190px] py-[13px] px-10 lg:hidden xl:block rounded-none bg-[#3d3d42] hover:bg-[#5e5e5e] outline-none border-[0.5px] border-transparent focus:border-[0.5px] focus:border-[#9e9e9e] hover:border-[#7e7e7e]"
+                        />
+                        <button class="bg-[#0066b8] py-[14px] px-5 flex items-center gap-3 hover:bg-[#005892]">
+                            <i class="fa fa-download"></i>
+                            <p>Download</p>
+                        </button>
+                    </div>
 				</div>
+                
+				
 			</div>
 		</header>
 
 		<section class="cta pt-[52px] bg-[#25252b] text-[#ccc]">
 			<div class="container">
-				<p class="py-3 px-8 text-[16px] text-center">
+				<p class="py-3 px-8 text-[15px] text-center">
 					<a href="#" class="text-[#0098FF] underline hover:no-underline">Version 1.80</a> is now available! Read about
 					the new features and fixes from June.
 				</p>
@@ -75,10 +77,10 @@
 
 		<section class="banner bg-bg-1">
 			<div class="container">
-				<div class="banner__wrapper pt-7 lg:flex lg:items-center lg:justify-center lg:gap-6 lg:py-7 xl:items-start">
+				<div class="banner__wrapper pt-7 lg:flex lg:items-center lg:justify-center lg:gap-6 lg:py-8 xl:items-start">
 					<div class="banner__intro text-bg-2 text-center lg:w-[800px] xl:mt-7">
 						<div>
-							<h1 class="text-[42px] leading-[50px]">Code editing.<br />Redefined.</h1>
+							<h1 class="text-[45px] leading-[50px]">Code editing.<br />Redefined.</h1>
 							<p class="text-[#ffffff99] my-2 text-[14px]">Free. Built on open source. Runs everywhere.</p>
 						</div>
 
@@ -166,7 +168,7 @@
 						</p>
 					</div>
 
-					<div class="banner__image pb-8">
+					<div class="banner__image md:pb-8">
 						<img src="./images/banner-image2.png" class="lg:block lg:m-auto lg:w-full" alt="" />
 					</div>
 				</div>
@@ -176,26 +178,26 @@
 		<section class="value-props">
 			<div class="container">
 				<div class="value-props__content">
-					<ul class="grid grid-cols-2 gap-6 md:grid-cols-4">
+					<ul class="grid grid-cols-2 md:gap-6 md:grid-cols-4">
 						<div class="group cursor-pointer">
-							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
+							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-8 group-hover:bg-[#ddd]">
 								<i class="fa-regular fa-lightbulb text-[42px] text-[#242424] group-hover:text-[#491e99]"></i
 								>IntelliSense
 							</li>
 						</div>
 						<div class="group cursor-pointer">
-							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
+							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-8 group-hover:bg-[#ddd]">
 								<i class="fa fa-play text-[42px] text-[#242424] group-hover:text-[#3ed17b]"></i>Run and Debug
 							</li>
 						</div>
 						<div class="group cursor-pointer">
-							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
+							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-8 group-hover:bg-[#ddd]">
 								<i class="fa-solid fa-code-branch text-[42px] text-[#242424] group-hover:text-[#f83a3a]"></i>Built-in
 								Git
 							</li>
 						</div>
 						<div class="group cursor-pointer">
-							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-6 group-hover:bg-[#ddd]">
+							<li class="flex flex-col items-center justify-center gap-2 text-[17px] py-8 group-hover:bg-[#ddd]">
 								<i class="fa fa-table-cells-large text-[42px] text-[#242424] group-hover:text-[#000000]"></i>Extensions
 							</li>
 						</div>
@@ -204,7 +206,7 @@
 			</div>
 		</section>
 
-		<section class="reviews bg-bg-3 py-10 xl:py-0 xl:pb-20 xl:pt-16">
+		<section class="reviews bg-bg-3 py-10 xl:py-0 xl:pb-20 xl:pt-24">
 			<div class="container">
 				<div class="reviews__slider">
 					<div class="reviews__group">
@@ -214,15 +216,15 @@
 
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
-										<span class="flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Una Kravets</h6>
+										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Una Kravets</h6>
 											<small class="cursor-pointer text-[#707070]">@Una</small>
 										</span>
 
 										<i class="fa-brands fa-twitter text-[#ccc]"></i>
 									</div>
 
-									<p>
+									<p class="text-[#242424] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">
 										VS <a href="#" class="text-[#0098FF] hover:underline">@code</a> does so many things right. I'm
 										constantly impressed by the UX, and customizing workspace / user preferences is no exception. 🙌🏼💯
 										It just keeps getting better ❤️
@@ -235,15 +237,15 @@
 
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
-										<span class="flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Jonathan Dunlap</h6>
+										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Jonathan Dunlap</h6>
 											<small class="cursor-pointer text-[#707070]">@jadbox</small>
 										</span>
 
 										<i class="fa-brands fa-twitter text-[#ccc]"></i>
 									</div>
 
-									<p>
+									<p class="text-[#242424] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">
 										VS Code will have deep remote development. You can connect to a container running a different OS and
 										use any VS Code plugins, linting, debugging for that environment. 🔥🔥🔥
 									</p>
@@ -255,15 +257,15 @@
 
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
-										<span class="flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Pavithra Kodmad</h6>
+										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Pavithra Kodmad</h6>
 											<small class="cursor-pointer text-[#707070]">@PKodmad</small>
 										</span>
 
 										<i class="fa-brands fa-twitter text-[#ccc]"></i>
 									</div>
 
-									<p>
+									<p class="text-[#242424] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">
 										VS Code is my most used and favorite editor. I love being able to customize the editor - changing
 										the layout, the icons, fonts and color scheme is so easy!
 									</p>
@@ -279,15 +281,15 @@
 
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
-										<span class="flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Darren</h6>
+										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Darren</h6>
 											<small class="cursor-pointer text-[#707070]">@MrDarrenV</small>
 										</span>
 
 										<i class="fa-brands fa-twitter text-[#ccc]"></i>
 									</div>
 
-									<p>
+									<p class="text-[#242424] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">
 										Just as I thought <a href="#" class="text-[#0098FF] hover:underline">@code</a> couldn't get better,
 										out comes its Remote Development plugins that let you remote into containers as a dev environment!
 										😍
@@ -300,15 +302,15 @@
 
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
-										<span class="flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Cassidy Williams</h6>
+										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Cassidy Williams</h6>
 											<small class="cursor-pointer text-[#707070]">@cassidoo</small>
 										</span>
 
 										<i class="fa-brands fa-twitter text-[#ccc]"></i>
 									</div>
 
-									<p>
+									<p class="text-[#242424] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">
 										I was a vim fan, but then discovered VS Code's Vim plugin, which lets me add in my vim keybindings.
 										I can maintain my coding style without having to compromise on speed.
 									</p>
@@ -320,15 +322,15 @@
 
 								<div class="reviews__text">
 									<div class="flex justify-between items-start">
-										<span class="flex lg:items-center lg:gap-2 flex-col lg:flex-row">
-											<h6 class="hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Gift Egwuenu</h6>
+										<span class="group flex lg:items-center lg:gap-2 flex-col lg:flex-row">
+											<h6 class="group-hover:text-[#0066b8] cursor-pointer text-[13px] font-bold">Gift Egwuenu</h6>
 											<small class="cursor-pointer text-[#707070]">@lauragift21</small>
 										</span>
 
 										<i class="fa-brands fa-twitter text-[#ccc]"></i>
 									</div>
 
-									<p>
+									<p class="text-[#242424] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">
 										I love <a href="#" class="text-[#0098FF] hover:underline">@code</a> The built-in markdown previewer
 										is awesome and the plugin system allows me to use GitLens, which makes my workflow so much easier.
 									</p>
@@ -427,7 +429,7 @@
 
 		<section class="getting-started bg-bg-3">
 			<div class="container">
-				<div class="getting-started__content py-10">
+				<div class="getting-started__content py-16">
 					<h1 class="text-center text-[20px] md:text-[30px]">VS Code for</h1>
 
 					<div class="my-10">
@@ -451,7 +453,7 @@
 						</p>
 					</div>
 
-					<div class="text-center my-5">
+					<div class="text-center mb-5 mt-12">
 						<button class="bg-[#0066b8] px-10 py-5 text-bg-2 font-bold rounded-sm hover:bg-[#005892]">
 							Get Started Now
 						</button>
@@ -622,12 +624,12 @@
 				<div class="license-privacy__wrapper py-[50px] px-[18px] text-center lg:px-24">
 					<div class="flex flex-col lg:flex-row lg:items-center lg:gap-20 lg:pb-32">
 						<div class="lg:w-[50%] lg:float-left px-[30px]">
-							<h1 class="font-bold text-[18px]">Want new features sooner?</h1>
+							<h1 class="font-bold text-[18px] mb-3">Want new features sooner?</h1>
 							<h3>Get the <a href="#" class="text-[#0066b8] hover:underline">Insiders build</a> instead.</h3>
 						</div>
 
 						<div class="my-32 lg:my-0 lg:w-[50%] lg:float-left px-[30px]">
-							<h1 class="font-bold text-[18px]">
+							<h1 class="font-bold text-[18px] mb-3">
 								Use <a href="#" class="text-[#0066b8] hover:underline">vscode.dev</a> for quick edits online!
 							</h1>
 							<h3>GitHub, Azure Repos, and local files.</h3>
@@ -635,7 +637,7 @@
 					</div>
 
 					<div class="px-[15%]">
-						<h4 class="text-[14px] font-bold">License and Privacy Terms</h4>
+						<h4 class="text-[14px] font-bold mb-3">License and Privacy Terms</h4>
 						<p class="text-[12px] leading-8">
 							By downloading and using Visual Studio Code, you agree to the
 							<a href="#" class="text-[#0066b8] hover:underline">license terms</a> and

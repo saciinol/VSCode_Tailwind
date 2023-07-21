@@ -16,12 +16,16 @@
 	@apply relative;
 }
 
+#tns1 {
+	@apply ease-in duration-[.5s];
+}
+
 .tns-controls {
 	@apply flex items-center justify-between absolute top-[40%] left-[2rem] w-[88%] md:top-[9rem] md:w-[42rem] lg:top-[5rem] lg:w-[58.5rem] xl:top-[3rem] xl:left-[1.5rem] xl:w-[70rem] z-20;
 }
 
 .tns-controls button {
-	@apply text-[25px] text-[#777];
+	@apply text-[25px] text-[#777] hover:text-[#9c9c9c] active:text-black focus:text-black border-[2px] border-transparent rounded-[4px] active:border-[2px] active:border-black active:rounded-[4px] focus:border-[2px] focus:border-black focus:rounded-[4px];
 }
 
 .fa-chevron-left,
@@ -30,6 +34,10 @@
 }
 
 @layer components {
+	input::placeholder {
+		@apply text-[#dbdbdb] text-[14px] font-[30];
+	}
+
 	.header.active {
 		@apply shadow-[0_3px_3px_0_rgba(0,0,0,0.33)] duration-[.5s];
 	}
@@ -43,11 +51,11 @@
 	}
 
 	.header__nav {
-		@apply bg-bg-1 w-screen h-[340px] absolute bottom-52 left-0 ease-in duration-300 overflow-y-scroll lg:w-auto lg:h-auto lg:static lg:overflow-y-hidden;
+		@apply bg-bg-1 w-screen h-0 absolute top-full left-0 ease-in duration-[.25s] overflow-y-scroll lg:w-auto lg:h-auto lg:static lg:overflow-y-hidden;
 	}
 
 	.header__nav.open {
-		@apply top-full;
+		@apply h-[340px];
 	}
 
 	.chevron__down {
@@ -70,7 +78,7 @@
 
 		.use__content h2 {
 			font-size: 19px;
-			font-weight: 100;
+			font-weight: 1;
 		}
 
 		.use__content p {
@@ -114,6 +122,10 @@
 			width: 768px;
 		}
 
+		.use__item:nth-child(odd) .use__text {
+			padding: 0 20px;
+		}
+
 		.use__item:nth-child(odd) img {
 			float: left;
 			width: 200px;
@@ -128,7 +140,7 @@
 		}
 
 		.use__content h2 {
-			font-size: 30px !important;
+			font-size: 27px !important;
 		}
 
 		.use__text {
@@ -146,6 +158,10 @@
 
 		.use__content {
 			width: 1024px;
+		}
+
+		.use__item:nth-child(odd) .use__text {
+			padding: 0 30px;
 		}
 
 		.use__item:nth-child(odd) img {
@@ -178,6 +194,10 @@
 			padding-bottom: 140px;
 		}
 
+		.use__item:nth-child(odd) .use__text {
+			padding: 0 0 0 40px;
+		}
+
 		.use__item:nth-child(odd) img {
 			float: left;
 			width: 350px;
@@ -192,7 +212,12 @@
 		}
 
 		.use__text {
-			width: 750px;
+			width: 700px;
+		}
+
+		.use__content p {
+			font-size: 18px !important;
+			line-height: 32px;
 		}
 	}
 }
