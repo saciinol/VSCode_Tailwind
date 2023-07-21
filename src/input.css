@@ -21,7 +21,7 @@
 }
 
 .tns-controls {
-	@apply flex items-center justify-between absolute top-[40%] left-[2rem] w-[88%] md:top-[9rem] md:w-[42rem] lg:top-[5rem] lg:w-[58.5rem] xl:top-[3rem] xl:left-[1.5rem] xl:w-[70rem] z-20;
+	@apply flex items-center justify-between absolute top-[42%] left-[2rem] w-[88%] md:top-[10.5rem] md:w-[42rem] lg:top-[6rem] lg:w-[58.5rem] xl:top-[5rem] xl:left-[1.5rem] xl:w-[70rem] z-20;
 }
 
 .tns-controls button {
@@ -55,7 +55,7 @@
 	}
 
 	.header__nav.open {
-		@apply h-[340px];
+		@apply h-[340px] lg:h-auto;
 	}
 
 	.chevron__down {

@@ -641,6 +641,12 @@ input::placeholder{
   height: 340px;
 }
 
+@media (min-width: 1024px){
+  .header__nav.open{
+    height: auto;
+  }
+}
+
 .chevron__down{
   position: absolute;
   z-index: 10;
@@ -851,6 +857,11 @@ input::placeholder{
 .my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mb-3{
@@ -1302,6 +1313,11 @@ input::placeholder{
   padding-bottom: 50px;
 }
 
+.px-\[15px\]{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .pb-2{
   padding-bottom: 0.5rem;
 }
@@ -1376,10 +1392,6 @@ input::placeholder{
 
 .text-\[15px\]{
   font-size: 15px;
-}
-
-.text-\[16px\]{
-  font-size: 16px;
 }
 
 .text-\[17px\]{
@@ -1527,7 +1539,7 @@ input::placeholder{
 
 .tns-controls{
   position: absolute;
-  top: 40%;
+  top: 42%;
   left: 2rem;
   z-index: 20;
   display: flex;
@@ -1538,21 +1550,21 @@ input::placeholder{
 
 @media (min-width: 768px){
   .tns-controls{
-    top: 9rem;
+    top: 10.5rem;
     width: 42rem;
   }
 }
 
 @media (min-width: 1024px){
   .tns-controls{
-    top: 5rem;
+    top: 6rem;
     width: 58.5rem;
   }
 }
 
 @media (min-width: 1200px){
   .tns-controls{
-    top: 3rem;
+    top: 5rem;
     left: 1.5rem;
     width: 70rem;
   }
@@ -1712,8 +1724,8 @@ input::placeholder{
     gap: 1.5rem;
   }
 
-  .md\:pb-8{
-    padding-bottom: 2rem;
+  .md\:pb-5{
+    padding-bottom: 1.25rem;
   }
 
   .md\:text-\[16px\]{
@@ -1765,6 +1777,10 @@ input::placeholder{
 
   .lg\:max-w-\[267px\]{
     max-width: 267px;
+  }
+
+  .lg\:max-w-\[1024px\]{
+    max-width: 1024px;
   }
 
   .lg\:grid-cols-6{
@@ -1880,12 +1896,28 @@ input::placeholder{
     left: 1.75rem;
   }
 
+  .xl\:m-auto{
+    margin: auto;
+  }
+
   .xl\:mt-7{
     margin-top: 1.75rem;
   }
 
   .xl\:block{
     display: block;
+  }
+
+  .xl\:hidden{
+    display: none;
+  }
+
+  .xl\:w-full{
+    width: 100%;
+  }
+
+  .xl\:max-w-\[1200px\]{
+    max-width: 1200px;
   }
 
   .xl\:items-start{
@@ -1905,8 +1937,8 @@ input::placeholder{
     padding-bottom: 5rem;
   }
 
-  .xl\:pt-24{
-    padding-top: 6rem;
+  .xl\:pt-20{
+    padding-top: 5rem;
   }
 
   .xl\:text-\[18px\]{
